@@ -22,6 +22,11 @@ If I could neglect roundoff error, I could trace one forward and one backward ra
 The add-on offers check boxes to draw properly named focal points and planes as well as principal points and planes.
 
 ## Get started
+### Building it yourself
+If you have Visual Studio 2022 installed: Open the FirstOrderLensProperties.sln solution in Visual Studio 2022 and build the FirstOrderLensProperties project to obtain the FirstOrderLensProperties.exe executable.
+### Using the installer
+
+
 
 
 
