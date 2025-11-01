@@ -23,9 +23,19 @@ The add-on offers check boxes to draw properly named focal points and planes as 
 
 ## Get started
 ### Building it yourself
-If you have Visual Studio 2022 installed: Open the FirstOrderLensProperties.sln solution in Visual Studio 2022 and build the FirstOrderLensProperties project to obtain the FirstOrderLensProperties.exe executable.
+If you have Visual Studio 2022 installed: Open the FirstOrderLensProperties.sln solution in Visual Studio 2022 and build the FirstOrderLensProperties project to obtain the FirstOrderLensProperties.exe executable, in the LT_FirstOrderLensProperties\bin\Release\net8.0-windows subdirectory of your local copy.
 ### Using the installer
+In the LT_FirstOrderLensProperties/FirstOrderLensProperties_Setup/Release/ subdirectory, run the setup.exe program. It will install the add-on in C:\Program Files\JMO\FirstOrderLensProperties.
+### Connecting LightTools
+* In 3D view, click Tools->Addins.
+* In the "Customize User Tools Menu", click Add.
+* Enter your "Menu Text" (e.g. "First order lens properties"
+* For "Command", click on the three little dots and navigate to the folder where FirstOrderLensProperties.exe resides. Select FirstOrderLensProperties.exe and confirm by clicking "Open".
+* Leave "Agruments" empty
+* Use any Initial Directory; the default LTUser folder is fine. The add-in doesn't read or write any files.
 
+## Use it
+In LightTools, make sure all desired lens surfaces are included in the current selection. Then, click Tools->First order lens properties (or whatever name you gave in the Menu Text entry). The add-on window should open. Click the large button, "Compute lens properties". The add-on will do its work and display the result in the Macro Output tab (typically, at the bottom of the LightTools window, next to the Message Log tab)
 
 
 
