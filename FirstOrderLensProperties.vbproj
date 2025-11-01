@@ -6,6 +6,18 @@
     <StartupObject>Sub Main</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <Title>LightTools first order lens properties</Title>
+    <Version>1.0.0</Version>
+    <Authors>Julius Muschaweck</Authors>
+    <Company>JMO Illumination Optics</Company>
+    <Description>A LightTools add-on to compute first order properties of a compound lens, such as equivalent/back/front focal length. Written in VB .NET using Visual Studio 2022</Description>
+    <Copyright>This is free and unencumbered software released into the public domain.</Copyright>
+    <PackageProjectUrl>https://github.com/JuliusMuschaweck/LT_FirstOrderLensProperties</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/JuliusMuschaweck/LT_FirstOrderLensProperties</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -57,9 +69,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
