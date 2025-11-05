@@ -12,27 +12,48 @@ Module LTConnect
     Private m_ltServer As LTAPI
     Public Function GetLTAPIServer() As LTAPI4
         If m_ltServer Is Nothing Then
-            Dim lt As LightTools.LTAPI4
-            Dim ltLoc As Locator
-            Dim cmd As String
+            Dim S() As String = System.Environment.GetCommandLineArgs
+            If S IsNot Nothing Then
+                Dim PIDStr As String = "-LTPID"
+                For Each Str As String In S
+                    If Strings.InStr(Str, PIDStr) > 0 Then
+                        Dim TStr As String = Str
+                        TStr = TStr.Replace(PIDStr, "")
+                        Dim PID As Integer = Convert.ToInt32(TStr)
+                        Dim lt As LightTools.LTAPI4 = LTJumpStartNET.GetLTAPI4FromPID(PID)
+                        If lt IsNot Nothing Then
+                            m_ltServer = lt
+                        End If
+                    End If
+                Next
+            End If
+            'Try to connect directly
+            If m_ltServer Is Nothing Then
+                m_ltServer = New LightTools.LTAPI4
+            End If
 
-            ltLoc = CreateObject("LTLocator.Locator")
-            ' to get a LightTools Server pointer, you need to know 
-            ' the calling server process ID
-            ' if it is passed to this application via command line 
-            ' in a shape of "-LTPID1234" (AddIn standard)
-            ' (1234 being hypothetical LightTools Process ID), do this
 
-            cmd = Command() ' get command line
-            ' if command line is in the form of "-LTPID1234" you can 
-            ' directly pass it to Locator
+            'Dim lt As LightTools.LTAPI4
+            'Dim ltLoc As Locator
+            'Dim cmd As String
 
-            lt = ltLoc.GetLTAPIFromString(cmd)
-            'if the client code knows LT PID somehow, it could use the
-            ' GetLTAPI(pidNumber) interface
+            'ltLoc = CreateObject("LTLocator.Locator")
+            '' to get a LightTools Server pointer, you need to know 
+            '' the calling server process ID
+            '' if it is passed to this application via command line 
+            '' in a shape of "-LTPID1234" (AddIn standard)
+            '' (1234 being hypothetical LightTools Process ID), do this
 
-            m_ltServer = lt
-            ltLoc = Nothing
+            'cmd = Command() ' get command line
+            '' if command line is in the form of "-LTPID1234" you can 
+            '' directly pass it to Locator
+
+            'lt = ltLoc.GetLTAPIFromString(cmd)
+            ''if the client code knows LT PID somehow, it could use the
+            '' GetLTAPI(pidNumber) interface
+
+            'm_ltServer = lt
+            'ltLoc = Nothing
         End If
         GetLTAPIServer = m_ltServer
     End Function
