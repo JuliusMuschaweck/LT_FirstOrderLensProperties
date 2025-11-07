@@ -53,6 +53,7 @@ Public Class Form1
             txtLog.Text = MsgStr
         Catch ex As Exception
             lt.Message(ex.Message)
+            txtLog.Text = MsgStr
         End Try
         lt.SetOption("DBUPDATE", dbupdate_sav)
         lt.SetOption("VIEWUPDATE", viewupdate_sav)
@@ -161,11 +162,11 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        LinkLabel1.Text = "Click here to get more info"
-        LinkLabel1.Links.Add(6, 4, "https://www.jmoptics.de/")
+        LinkLabel1.Text = "JMO Illumination Optics"
+        LinkLabel1.Links.Add(0, 23, "https://www.jmoptics.de/")
         PictureBox1.Image = Image.FromFile(Application.StartupPath & "\Resources\JMO.png")
-        lblDescription.Text = "Select the first and last surface in the lens system to compute first order properties. " &
-            "If the two surfaces are not selected in LightTools, use the selection options below. For grouped lenses, select the group"
+        lblDescription.Text = "To compute first order properties, select objects such that the first and last surface in the lens system is included." &
+            "Alternatively, use the selection options below. For grouped lenses, select the group."
         UpdateSolidList()
     End Sub
 

@@ -53,11 +53,10 @@ Partial Class Form1
         Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button1.AutoSize = True
         Button1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Button1.Font = New Font("Microsoft Sans Serif", 9F)
-        Button1.Location = New Point(443, 21)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button1.Location = New Point(332, 28)
         Button1.Name = "Button1"
-        Button1.Size = New Size(126, 25)
+        Button1.Size = New Size(276, 42)
         Button1.TabIndex = 0
         Button1.Text = "Compute Properties"
         Button1.UseVisualStyleBackColor = True
@@ -65,11 +64,10 @@ Partial Class Form1
         ' CheckBoxDrawFocalPoints
         ' 
         CheckBoxDrawFocalPoints.AutoSize = True
-        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawFocalPoints.Location = New Point(6, 21)
-        CheckBoxDrawFocalPoints.Margin = New Padding(3, 2, 3, 2)
+        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPoints.Location = New Point(7, 28)
         CheckBoxDrawFocalPoints.Name = "CheckBoxDrawFocalPoints"
-        CheckBoxDrawFocalPoints.Size = New Size(120, 19)
+        CheckBoxDrawFocalPoints.Size = New Size(145, 22)
         CheckBoxDrawFocalPoints.TabIndex = 3
         CheckBoxDrawFocalPoints.Text = "Draw focal points"
         CheckBoxDrawFocalPoints.UseVisualStyleBackColor = True
@@ -77,11 +75,10 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPoints
         ' 
         CheckBoxDrawPrincipalPoints.AutoSize = True
-        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawPrincipalPoints.Location = New Point(6, 46)
-        CheckBoxDrawPrincipalPoints.Margin = New Padding(3, 2, 3, 2)
+        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPoints.Location = New Point(7, 61)
         CheckBoxDrawPrincipalPoints.Name = "CheckBoxDrawPrincipalPoints"
-        CheckBoxDrawPrincipalPoints.Size = New Size(141, 19)
+        CheckBoxDrawPrincipalPoints.Size = New Size(167, 22)
         CheckBoxDrawPrincipalPoints.TabIndex = 4
         CheckBoxDrawPrincipalPoints.Text = "Draw principal points"
         CheckBoxDrawPrincipalPoints.UseVisualStyleBackColor = True
@@ -89,11 +86,10 @@ Partial Class Form1
         ' CheckBoxDrawFocalPlanes
         ' 
         CheckBoxDrawFocalPlanes.AutoSize = True
-        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawFocalPlanes.Location = New Point(6, 71)
-        CheckBoxDrawFocalPlanes.Margin = New Padding(3, 2, 3, 2)
+        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPlanes.Location = New Point(7, 95)
         CheckBoxDrawFocalPlanes.Name = "CheckBoxDrawFocalPlanes"
-        CheckBoxDrawFocalPlanes.Size = New Size(199, 19)
+        CheckBoxDrawFocalPlanes.Size = New Size(241, 22)
         CheckBoxDrawFocalPlanes.TabIndex = 5
         CheckBoxDrawFocalPlanes.Text = "Draw focal planes. Half Width = "
         CheckBoxDrawFocalPlanes.UseVisualStyleBackColor = True
@@ -101,11 +97,10 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPlanes
         ' 
         CheckBoxDrawPrincipalPlanes.AutoSize = True
-        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawPrincipalPlanes.Location = New Point(6, 100)
-        CheckBoxDrawPrincipalPlanes.Margin = New Padding(3, 2, 3, 2)
+        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPlanes.Location = New Point(6, 133)
         CheckBoxDrawPrincipalPlanes.Name = "CheckBoxDrawPrincipalPlanes"
-        CheckBoxDrawPrincipalPlanes.Size = New Size(220, 19)
+        CheckBoxDrawPrincipalPlanes.Size = New Size(263, 22)
         CheckBoxDrawPrincipalPlanes.TabIndex = 6
         CheckBoxDrawPrincipalPlanes.Text = "Draw principal planes. Half Width = "
         CheckBoxDrawPrincipalPlanes.TextAlign = ContentAlignment.TopRight
@@ -113,22 +108,20 @@ Partial Class Form1
         ' 
         ' FocalPlaneHalfWidthTextBox
         ' 
-        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
-        FocalPlaneHalfWidthTextBox.Location = New Point(250, 69)
-        FocalPlaneHalfWidthTextBox.Margin = New Padding(3, 2, 3, 2)
+        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        FocalPlaneHalfWidthTextBox.Location = New Point(272, 92)
         FocalPlaneHalfWidthTextBox.Name = "FocalPlaneHalfWidthTextBox"
-        FocalPlaneHalfWidthTextBox.Size = New Size(45, 21)
+        FocalPlaneHalfWidthTextBox.Size = New Size(39, 24)
         FocalPlaneHalfWidthTextBox.TabIndex = 7
         FocalPlaneHalfWidthTextBox.Text = "5"
         FocalPlaneHalfWidthTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' PrincipalPlaneHalfWidthTextBox
         ' 
-        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
-        PrincipalPlaneHalfWidthTextBox.Location = New Point(250, 98)
-        PrincipalPlaneHalfWidthTextBox.Margin = New Padding(3, 2, 3, 2)
+        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        PrincipalPlaneHalfWidthTextBox.Location = New Point(272, 131)
         PrincipalPlaneHalfWidthTextBox.Name = "PrincipalPlaneHalfWidthTextBox"
-        PrincipalPlaneHalfWidthTextBox.Size = New Size(45, 21)
+        PrincipalPlaneHalfWidthTextBox.Size = New Size(39, 24)
         PrincipalPlaneHalfWidthTextBox.TabIndex = 8
         PrincipalPlaneHalfWidthTextBox.Text = "5"
         PrincipalPlaneHalfWidthTextBox.TextAlign = HorizontalAlignment.Right
@@ -141,54 +134,57 @@ Partial Class Form1
         ' 
         cboSolids.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         cboSolids.FormattingEnabled = True
-        cboSolids.Location = New Point(109, 96)
+        cboSolids.Location = New Point(125, 128)
+        cboSolids.Margin = New Padding(3, 4, 3, 4)
         cboSolids.Name = "cboSolids"
-        cboSolids.Size = New Size(321, 23)
+        cboSolids.Size = New Size(323, 28)
         cboSolids.TabIndex = 9
         ' 
         ' cboSolidsClone
         ' 
         cboSolidsClone.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         cboSolidsClone.FormattingEnabled = True
-        cboSolidsClone.Location = New Point(109, 125)
+        cboSolidsClone.Location = New Point(125, 167)
+        cboSolidsClone.Margin = New Padding(3, 4, 3, 4)
         cboSolidsClone.Name = "cboSolidsClone"
-        cboSolidsClone.Size = New Size(321, 23)
+        cboSolidsClone.Size = New Size(323, 28)
         cboSolidsClone.TabIndex = 10
         ' 
         ' btnRefresh
         ' 
         btnRefresh.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnRefresh.Location = New Point(355, 67)
+        btnRefresh.Location = New Point(299, 89)
+        btnRefresh.Margin = New Padding(3, 4, 3, 4)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(75, 23)
+        btnRefresh.Size = New Size(150, 31)
         btnRefresh.TabIndex = 11
-        btnRefresh.Text = "Refresh"
+        btnRefresh.Text = "Refresh surface lists"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
         ' lblDescription
         ' 
         lblDescription.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        lblDescription.Location = New Point(12, 9)
+        lblDescription.Location = New Point(14, 12)
         lblDescription.Name = "lblDescription"
-        lblDescription.Size = New Size(418, 55)
+        lblDescription.Size = New Size(435, 73)
         lblDescription.TabIndex = 12
         lblDescription.Text = "Select..."
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(19, 99)
+        Label1.Location = New Point(22, 132)
         Label1.Name = "Label1"
-        Label1.Size = New Size(71, 15)
+        Label1.Size = New Size(89, 20)
         Label1.TabIndex = 13
         Label1.Text = "First Surface"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(19, 128)
+        Label2.Location = New Point(22, 171)
         Label2.Name = "Label2"
-        Label2.Size = New Size(70, 15)
+        Label2.Size = New Size(88, 20)
         Label2.TabIndex = 13
         Label2.Text = "Last Surface"
         ' 
@@ -202,9 +198,11 @@ Partial Class Form1
         GroupBox1.Controls.Add(FocalPlaneHalfWidthTextBox)
         GroupBox1.Controls.Add(PrincipalPlaneHalfWidthTextBox)
         GroupBox1.Controls.Add(Button1)
-        GroupBox1.Location = New Point(19, 179)
+        GroupBox1.Location = New Point(22, 239)
+        GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(575, 135)
+        GroupBox1.Padding = New Padding(3, 4, 3, 4)
+        GroupBox1.Size = New Size(614, 180)
         GroupBox1.TabIndex = 14
         GroupBox1.TabStop = False
         GroupBox1.Text = "Compute First Order Properties"
@@ -212,17 +210,19 @@ Partial Class Form1
         ' txtLog
         ' 
         txtLog.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtLog.Location = New Point(19, 320)
+        txtLog.Location = New Point(22, 427)
+        txtLog.Margin = New Padding(3, 4, 3, 4)
         txtLog.Multiline = True
         txtLog.Name = "txtLog"
         txtLog.ReadOnly = True
-        txtLog.Size = New Size(569, 104)
+        txtLog.Size = New Size(607, 137)
         txtLog.TabIndex = 15
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        PictureBox1.Location = New Point(436, 18)
+        PictureBox1.Location = New Point(477, 13)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(152, 130)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -234,9 +234,10 @@ Partial Class Form1
         chkUseLTSelection.AutoSize = True
         chkUseLTSelection.Checked = True
         chkUseLTSelection.CheckState = CheckState.Checked
-        chkUseLTSelection.Location = New Point(19, 154)
+        chkUseLTSelection.Location = New Point(22, 205)
+        chkUseLTSelection.Margin = New Padding(3, 4, 3, 4)
         chkUseLTSelection.Name = "chkUseLTSelection"
-        chkUseLTSelection.Size = New Size(154, 19)
+        chkUseLTSelection.Size = New Size(192, 24)
         chkUseLTSelection.TabIndex = 17
         chkUseLTSelection.Text = "Use LightTools Selection"
         chkUseLTSelection.UseVisualStyleBackColor = True
@@ -245,28 +246,29 @@ Partial Class Form1
         ' 
         LinkLabel1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         LinkLabel1.AutoSize = True
-        LinkLabel1.Location = New Point(436, 151)
+        LinkLabel1.Location = New Point(469, 147)
         LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New Size(68, 15)
+        LinkLabel1.Size = New Size(167, 20)
         LinkLabel1.TabIndex = 18
         LinkLabel1.TabStop = True
-        LinkLabel1.Text = "JMO Optics"
+        LinkLabel1.Text = "JMO Illumination Optics"
         ' 
         ' btnSampleLens
         ' 
         btnSampleLens.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnSampleLens.Location = New Point(274, 67)
+        btnSampleLens.Location = New Point(125, 89)
+        btnSampleLens.Margin = New Padding(3, 4, 3, 4)
         btnSampleLens.Name = "btnSampleLens"
-        btnSampleLens.Size = New Size(75, 23)
+        btnSampleLens.Size = New Size(168, 31)
         btnSampleLens.TabIndex = 19
-        btnSampleLens.Text = "Demo Lens"
+        btnSampleLens.Text = "Insert demo lens"
         btnSampleLens.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(600, 436)
+        ClientSize = New Size(643, 581)
         Controls.Add(btnSampleLens)
         Controls.Add(LinkLabel1)
         Controls.Add(chkUseLTSelection)
@@ -279,7 +281,6 @@ Partial Class Form1
         Controls.Add(btnRefresh)
         Controls.Add(cboSolidsClone)
         Controls.Add(cboSolids)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Form1"
         Text = "LightTools first order lens properties"
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
