@@ -34,8 +34,7 @@ Public Class Form1
             SelSurf2 = SelSurf2.Replace(":", ".")
             lt.Cmd("\V3D Select " & lt.Str(SelSurf1) & " More " & lt.Str(SelSurf2))
         End If
-        Dim MsgStr As String = ""
-        MsgStr = "-------------------------" & vbCrLf
+        Dim MsgStr As String = "-------------------------" & vbCrLf
         MsgStr = MsgStr + "FirstOrderLensProperties " & Version & " J.Muschaweck" & vbCrLf
         Dim dbupdate_sav = lt.GetOption("DBUPDATE")
         Dim viewupdate_sav = lt.GetOption("VIEWUPDATE")
@@ -57,20 +56,6 @@ Public Class Form1
         End Try
         lt.SetOption("DBUPDATE", dbupdate_sav)
         lt.SetOption("VIEWUPDATE", viewupdate_sav)
-    End Sub
-
-    Public Sub Button2Handler()
-        ' MsgBox("hh")
-        TestRays()
-        TestVector3D()
-        Dim idx = {1, 3, 5, 6, 4, 2}
-        Dim arr() As Double = {11, 33, 55, 66, 44, 22}
-        Array.Sort(idx, arr)
-        Dim i As Integer
-        For i = 0 To 5
-            Debug.Print(arr(i).ToString)
-        Next
-
     End Sub
 
     Private Sub FocalPlaneHalfWidthTextBox_Validating(ByVal sender As Object,
@@ -157,7 +142,7 @@ Public Class Form1
         End With
     End Sub
 
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         UpdateSolidList()
     End Sub
 
@@ -170,7 +155,7 @@ Public Class Form1
         UpdateSolidList()
     End Sub
 
-    Private Sub chkUseLTSelection_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseLTSelection.CheckedChanged
+    Private Sub ChkUseLTSelection_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseLTSelection.CheckedChanged
         cboSolids.Enabled = False
         cboSolidsClone.Enabled = False
         btnRefresh.Enabled = False
@@ -188,7 +173,7 @@ Public Class Form1
         Process.Start(SI)
     End Sub
 
-    Private Sub btnSampleLens_Click(sender As Object, e As EventArgs) Handles btnSampleLens.Click
+    Private Sub BtnSampleLens_Click(sender As Object, e As EventArgs) Handles btnSampleLens.Click
         Dim lt As LightTools.LTAPI4 = GetLTAPIServer()
         If lt IsNot Nothing Then
             Dim ENTFile As String = Application.StartupPath & "\Resources\SampleLensSystem.1.ent"

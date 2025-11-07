@@ -39,12 +39,6 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="{c77e3a33-dd3e-4051-845e-9421149761f9}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>9</VersionMinor>
-      <VersionMajor>2022</VersionMajor>
-      <Guid>c77e3a33-dd3e-4051-845e-9421149761f9</Guid>
-    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -98,8 +92,7 @@
       <HintPath>..\..\..\..\..\..\..\Program Files\Optical Research Associates\LightTools 2024.09\Utilities.NET\Interop.LightTools.dll</HintPath>
     </Reference>
     <Reference Include="LTJumpStartNET">
-      <HintPath>..\..\..\..\..\..\Program Files\Optical Research Associates\LightTools 2025.03\Utilities.NET\LTJumpStartNET.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Optical Research Associates\LightTools 2025.03\Utilities.NET\LTJumpStartNET.dll</HintPath>
     </Reference>
   </ItemGroup>
 

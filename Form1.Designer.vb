@@ -53,7 +53,7 @@ Partial Class Form1
         Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button1.AutoSize = True
         Button1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Button1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.Location = New Point(332, 28)
         Button1.Name = "Button1"
         Button1.Size = New Size(276, 42)
@@ -64,7 +64,7 @@ Partial Class Form1
         ' CheckBoxDrawFocalPoints
         ' 
         CheckBoxDrawFocalPoints.AutoSize = True
-        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9F)
         CheckBoxDrawFocalPoints.Location = New Point(7, 28)
         CheckBoxDrawFocalPoints.Name = "CheckBoxDrawFocalPoints"
         CheckBoxDrawFocalPoints.Size = New Size(145, 22)
@@ -75,7 +75,7 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPoints
         ' 
         CheckBoxDrawPrincipalPoints.AutoSize = True
-        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9F)
         CheckBoxDrawPrincipalPoints.Location = New Point(7, 61)
         CheckBoxDrawPrincipalPoints.Name = "CheckBoxDrawPrincipalPoints"
         CheckBoxDrawPrincipalPoints.Size = New Size(167, 22)
@@ -86,7 +86,7 @@ Partial Class Form1
         ' CheckBoxDrawFocalPlanes
         ' 
         CheckBoxDrawFocalPlanes.AutoSize = True
-        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
         CheckBoxDrawFocalPlanes.Location = New Point(7, 95)
         CheckBoxDrawFocalPlanes.Name = "CheckBoxDrawFocalPlanes"
         CheckBoxDrawFocalPlanes.Size = New Size(241, 22)
@@ -97,7 +97,7 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPlanes
         ' 
         CheckBoxDrawPrincipalPlanes.AutoSize = True
-        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
         CheckBoxDrawPrincipalPlanes.Location = New Point(6, 133)
         CheckBoxDrawPrincipalPlanes.Name = "CheckBoxDrawPrincipalPlanes"
         CheckBoxDrawPrincipalPlanes.Size = New Size(263, 22)
@@ -108,7 +108,7 @@ Partial Class Form1
         ' 
         ' FocalPlaneHalfWidthTextBox
         ' 
-        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
         FocalPlaneHalfWidthTextBox.Location = New Point(272, 92)
         FocalPlaneHalfWidthTextBox.Name = "FocalPlaneHalfWidthTextBox"
         FocalPlaneHalfWidthTextBox.Size = New Size(39, 24)
@@ -118,7 +118,7 @@ Partial Class Form1
         ' 
         ' PrincipalPlaneHalfWidthTextBox
         ' 
-        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
         PrincipalPlaneHalfWidthTextBox.Location = New Point(272, 131)
         PrincipalPlaneHalfWidthTextBox.Name = "PrincipalPlaneHalfWidthTextBox"
         PrincipalPlaneHalfWidthTextBox.Size = New Size(39, 24)
@@ -266,7 +266,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(643, 581)
         Controls.Add(btnSampleLens)

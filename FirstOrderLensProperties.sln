@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FirstOrderLensProperties", "FirstOrderLensProperties.vbproj", "{0CB2ED1F-088D-4E1E-94A0-8F5FED1E41EA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FirstOrderLensPropertiesSetup", "FirstOrderLensPropertiesSetup\FirstOrderLensPropertiesSetup.vdproj", "{55D67BDC-273D-942D-D3D8-3A413D905A8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{0CB2ED1F-088D-4E1E-94A0-8F5FED1E41EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CB2ED1F-088D-4E1E-94A0-8F5FED1E41EA}.Release|x64.ActiveCfg = Release|x64
 		{0CB2ED1F-088D-4E1E-94A0-8F5FED1E41EA}.Release|x64.Build.0 = Release|x64
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Debug|Any CPU.ActiveCfg = Debug
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Debug|Any CPU.Build.0 = Debug
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Debug|x64.ActiveCfg = Debug
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Debug|x64.Build.0 = Debug
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Release|Any CPU.ActiveCfg = Release
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Release|Any CPU.Build.0 = Release
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Release|x64.ActiveCfg = Release
+		{55D67BDC-273D-942D-D3D8-3A413D905A8B}.Release|x64.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
