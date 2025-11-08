@@ -1,7 +1,7 @@
 <img src="Resources/JMO.png" alt="JMO Logo" width="100"/>
 
 # LT_FirstOrderLensProperties
-LightTools add-on to compute first order properties of a compound lens, such as equivalent/back/front focal length. Written in VB .NET using Visual Studio 2022
+A LightTools add-on to compute first order properties of a compound lens, such as equivalent/back/front focal length. Written in VB .NET using Visual Studio 2022
 
 ## The problem
 Let's assume we use LightTools (LT) illumination optics design software by Keysight (previously, by Synopsys) to create optics for collimating the light from an LED (imaging it into infinity), using two positive lenses because a single one is not strong enough. The diameter d of the LED approximates the far field angle alpha of the beam via focal length f: alpha = d / f. Therefore, we're interested in the focal length of the compound lens (our two lenses combined)
