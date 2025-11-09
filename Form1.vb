@@ -49,20 +49,21 @@ Public Class Form1
         lt.SetOption("DBUPDATE", 0)
         lt.SetOption("VIEWUPDATE", 0)
         Dim newline = Environment.NewLine
+        Dim format As String = NumberFormat()
         Try
             Dim paraxResult = TraceParaxialRays()
             Dim cardinalPoints = GetCardinalPoints(paraxResult.parax, paraxResult.rf1, paraxResult.rf2, paraxResult.rb1, paraxResult.rb2)
             If chkUseLTSelection.Checked Then
                 MsgStr = MsgStr + "Found " + paraxResult.surfaces.Length.ToString + " lens surfaces in selection" + newline
             End If
-            MsgStr = MsgStr + "front focus:     " & VecToString3D(cardinalPoints.focus_front_) + newline
-            MsgStr = MsgStr + "back focus:      " & VecToString3D(cardinalPoints.focus_back_) & newline
-            MsgStr = MsgStr + "front principal: " & VecToString3D(cardinalPoints.principal_front_) & newline
-            MsgStr = MsgStr + "back principal:  " & VecToString3D(cardinalPoints.principal_back_) & newline
+            MsgStr = MsgStr + "front focus:     " & VecToString3D(cardinalPoints.focus_front_, format) + newline
+            MsgStr = MsgStr + "back focus:      " & VecToString3D(cardinalPoints.focus_back_, format) & newline
+            MsgStr = MsgStr + "front principal: " & VecToString3D(cardinalPoints.principal_front_, format) & newline
+            MsgStr = MsgStr + "back principal:  " & VecToString3D(cardinalPoints.principal_back_, format) & newline
             Dim focalLengths = ComputeFocalLengths(cardinalPoints)
-            MsgStr = MsgStr + "EFL = " & focalLengths.EFL.ToString() & newline
-            MsgStr = MsgStr + "FFL = " & focalLengths.FFL.ToString() & newline
-            MsgStr = MsgStr + "BFL = " & focalLengths.BFL.ToString()
+            MsgStr = MsgStr + "FFL = " & focalLengths.FFL.ToString(format) & newline
+            MsgStr = MsgStr + "EFL = " & focalLengths.EFL.ToString(format) & newline
+            MsgStr = MsgStr + "BFL = " & focalLengths.BFL.ToString(format)
             DrawGeometry(cardinalPoints)
             MsgStr = AppendWarningsToString(MsgStr)
         Catch ex As Exception
@@ -78,21 +79,48 @@ Public Class Form1
         lt.SetOption("VIEWUPDATE", viewupdate_sav)
     End Sub
 
+    Private Function NumberFormat() As String ' number format
+        Dim ff = ""
+        If FixedButton.Checked Then
+            ff = "F"
+        ElseIf NFixedButton.Checked Then
+            ff = "N"
+        ElseIf GeneralButton.Checked Then
+            ff = "G"
+        Else
+            ErrorCheck.Assert(False, "illegal number format button, this cannot happen :-(")
+        End If
+        Return ff & nDigitsTextBox.Text
+    End Function
     Private Sub FocalPlaneHalfWidthTextBox_Validating(ByVal sender As Object,
                         ByVal e As System.ComponentModel.CancelEventArgs) Handles FocalPlaneHalfWidthTextBox.Validating
-        Dim errorMessage As String = ""
+        Dim errorMessage = ""
         If Not ValidHalfWidth(FocalPlaneHalfWidthTextBox.Text, errorMessage) Then
             e.Cancel = True
             FocalPlaneHalfWidthTextBox.Select(0, FocalPlaneHalfWidthTextBox.Text.Length)
-            Me.ErrorProvider1.SetError(FocalPlaneHalfWidthTextBox, errorMessage)
+            ErrorProvider1.SetError(FocalPlaneHalfWidthTextBox, errorMessage)
         End If
     End Sub
 
     Private Sub FocalPlaneHalfWidthTextBox_Validated(ByVal sender As Object,
-                            ByVal e As System.EventArgs) Handles FocalPlaneHalfWidthTextBox.Validated
-        Me.ErrorProvider1.SetError(FocalPlaneHalfWidthTextBox, "")
+                            ByVal e As EventArgs) Handles FocalPlaneHalfWidthTextBox.Validated
+        ErrorProvider1.SetError(FocalPlaneHalfWidthTextBox, "")
     End Sub
 
+    Private Sub NDigitsTextBox_Validating(ByVal sender As Object,
+                        ByVal e As System.ComponentModel.CancelEventArgs) Handles PrincipalPlaneHalfWidthTextBox.Validating, nDigitsTextBox.Validating
+        Dim errorMessage = ""
+        If Not ValidHalfWidth(nDigitsTextBox.Text, errorMessage) Then
+            e.Cancel = True
+            PrincipalPlaneHalfWidthTextBox.Select(0, nDigitsTextBox.Text.Length)
+            ErrorProvider1.SetError(nDigitsTextBox, errorMessage)
+        End If
+    End Sub
+
+    Private Sub NDigitsTextBox_Validated(ByVal sender As Object,
+                            ByVal e As EventArgs) Handles PrincipalPlaneHalfWidthTextBox.Validated, nDigitsTextBox.Validated
+        ErrorProvider1.SetError(PrincipalPlaneHalfWidthTextBox, "")
+    End Sub
     Private Sub PrincipalPlaneHalfWidthTextBox_Validating(ByVal sender As Object,
                         ByVal e As System.ComponentModel.CancelEventArgs) Handles PrincipalPlaneHalfWidthTextBox.Validating
         Dim errorMessage As String = ""
@@ -205,4 +233,6 @@ Public Class Form1
 
         End If
     End Sub
+
+
 End Class

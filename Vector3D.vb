@@ -4,18 +4,19 @@ Imports FirstOrderLensProperties.ErrorCheck
 Public Module Vector3D
     Private Const eps = 0.00000000000000022
 
-    Public Function VecToString3D(v() As Double) As String
+    Public Function VecToString3D(v() As Double, Optional format As String = "G") As String
         ErrorCheck.Assert(v.Length = 3, " " & MethodBase.GetCurrentMethod.Name() & ": v: length=3")
         Dim rv As String
-        rv = "(" & v(0).ToString() & "," & v(1).ToString() & "," & v(2).ToString() & ")"
+        rv = "(" & v(0).ToString(format) & "," & v(1).ToString(format) & "," & v(2).ToString(format) & ")"
         Return rv
     End Function
-    Public Function MatToString3D(M(,) As Double) As String
+    Public Function MatToString3D(M(,) As Double, Optional format As String = "G") As String
         ErrorCheck.Assert(M.Length > 0, " " & MethodBase.GetCurrentMethod.Name() & ": M: length>0")
         ErrorCheck.Assert(M.GetUpperBound(0) = 2, " " & MethodBase.GetCurrentMethod.Name() & ": M dim 0 = 2")
         ErrorCheck.Assert(M.GetUpperBound(1) = 2, " " & MethodBase.GetCurrentMethod.Name() & ": M dim 1 = 2")
         Dim rv As String
-        rv = "(" & VecToString3D(GetRow3D(M, 0)) & "," & VecToString3D(GetRow3D(M, 1)) & "," & VecToString3D(GetRow3D(M, 2)) & ")"
+        rv = "(" & VecToString3D(GetRow3D(M, 0), format) & "," & VecToString3D(GetRow3D(M, 1), format) &
+            "," & VecToString3D(GetRow3D(M, 2)) & ")"
         Return rv
     End Function
 
@@ -122,7 +123,6 @@ Public Module Vector3D
         If nRows < 2 Then
             Return True
         End If
-        Dim rv = True
         Dim i As Integer
         Dim v0() As Double = GetRow3D(rhs, 0)
         Dim v1() As Double = GetRow3D(rhs, 1)
@@ -190,8 +190,7 @@ Public Module Vector3D
         Dim c = Math.Cos(theta_rad)
         Dim imc = 1 - c
         Dim s = Math.Sin(theta_rad)
-        Dim rv(2, 2) As Double
-        rv = {{ux * ux * imc + c, ux * uy * imc - uz * s, ux * uz * imc + uy * s},
+        Dim rv = {{ux * ux * imc + c, ux * uy * imc - uz * s, ux * uz * imc + uy * s},
               {ux * uy * imc + uz * s, uy * uy * imc + c, uy * uz * imc - ux * s},
               {ux * uz * imc - uy * s, uy * uz * imc + ux * s, uz * uz * imc + c}}
         Return rv

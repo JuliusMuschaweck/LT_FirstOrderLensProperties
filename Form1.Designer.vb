@@ -38,6 +38,12 @@ Partial Class Form1
         Label1 = New Label()
         Label2 = New Label()
         GroupBox1 = New GroupBox()
+        GroupBox2 = New GroupBox()
+        GeneralButton = New RadioButton()
+        NFixedButton = New RadioButton()
+        FixedButton = New RadioButton()
+        Label3 = New Label()
+        nDigitsTextBox = New TextBox()
         txtLog = New TextBox()
         PictureBox1 = New PictureBox()
         chkUseLTSelection = New CheckBox()
@@ -45,6 +51,7 @@ Partial Class Form1
         btnSampleLens = New Button()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -54,7 +61,7 @@ Partial Class Form1
         Button1.AutoSize = True
         Button1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Button1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(332, 28)
+        Button1.Location = New Point(151, 27)
         Button1.Name = "Button1"
         Button1.Size = New Size(276, 42)
         Button1.TabIndex = 0
@@ -64,8 +71,8 @@ Partial Class Form1
         ' CheckBoxDrawFocalPoints
         ' 
         CheckBoxDrawFocalPoints.AutoSize = True
-        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawFocalPoints.Location = New Point(7, 28)
+        CheckBoxDrawFocalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPoints.Location = New Point(6, 92)
         CheckBoxDrawFocalPoints.Name = "CheckBoxDrawFocalPoints"
         CheckBoxDrawFocalPoints.Size = New Size(145, 22)
         CheckBoxDrawFocalPoints.TabIndex = 3
@@ -75,8 +82,8 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPoints
         ' 
         CheckBoxDrawPrincipalPoints.AutoSize = True
-        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawPrincipalPoints.Location = New Point(7, 63)
+        CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPoints.Location = New Point(6, 129)
         CheckBoxDrawPrincipalPoints.Name = "CheckBoxDrawPrincipalPoints"
         CheckBoxDrawPrincipalPoints.Size = New Size(167, 22)
         CheckBoxDrawPrincipalPoints.TabIndex = 4
@@ -86,8 +93,8 @@ Partial Class Form1
         ' CheckBoxDrawFocalPlanes
         ' 
         CheckBoxDrawFocalPlanes.AutoSize = True
-        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawFocalPlanes.Location = New Point(7, 98)
+        CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawFocalPlanes.Location = New Point(6, 166)
         CheckBoxDrawFocalPlanes.Name = "CheckBoxDrawFocalPlanes"
         CheckBoxDrawFocalPlanes.Size = New Size(241, 22)
         CheckBoxDrawFocalPlanes.TabIndex = 5
@@ -97,8 +104,8 @@ Partial Class Form1
         ' CheckBoxDrawPrincipalPlanes
         ' 
         CheckBoxDrawPrincipalPlanes.AutoSize = True
-        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawPrincipalPlanes.Location = New Point(6, 133)
+        CheckBoxDrawPrincipalPlanes.Font = New Font("Microsoft Sans Serif", 9.0F)
+        CheckBoxDrawPrincipalPlanes.Location = New Point(6, 203)
         CheckBoxDrawPrincipalPlanes.Name = "CheckBoxDrawPrincipalPlanes"
         CheckBoxDrawPrincipalPlanes.Size = New Size(263, 22)
         CheckBoxDrawPrincipalPlanes.TabIndex = 6
@@ -108,8 +115,8 @@ Partial Class Form1
         ' 
         ' FocalPlaneHalfWidthTextBox
         ' 
-        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
-        FocalPlaneHalfWidthTextBox.Location = New Point(272, 92)
+        FocalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        FocalPlaneHalfWidthTextBox.Location = New Point(272, 164)
         FocalPlaneHalfWidthTextBox.Name = "FocalPlaneHalfWidthTextBox"
         FocalPlaneHalfWidthTextBox.Size = New Size(39, 24)
         FocalPlaneHalfWidthTextBox.TabIndex = 7
@@ -118,8 +125,8 @@ Partial Class Form1
         ' 
         ' PrincipalPlaneHalfWidthTextBox
         ' 
-        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9F)
-        PrincipalPlaneHalfWidthTextBox.Location = New Point(272, 131)
+        PrincipalPlaneHalfWidthTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        PrincipalPlaneHalfWidthTextBox.Location = New Point(272, 203)
         PrincipalPlaneHalfWidthTextBox.Name = "PrincipalPlaneHalfWidthTextBox"
         PrincipalPlaneHalfWidthTextBox.Size = New Size(39, 24)
         PrincipalPlaneHalfWidthTextBox.TabIndex = 8
@@ -164,9 +171,9 @@ Partial Class Form1
         ' lblDescription
         ' 
         lblDescription.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        lblDescription.Location = New Point(14, 12)
+        lblDescription.Location = New Point(22, 12)
         lblDescription.Name = "lblDescription"
-        lblDescription.Size = New Size(435, 73)
+        lblDescription.Size = New Size(427, 73)
         lblDescription.TabIndex = 12
         lblDescription.Text = "Select..."
         ' 
@@ -191,6 +198,7 @@ Partial Class Form1
         ' GroupBox1
         ' 
         GroupBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        GroupBox1.Controls.Add(GroupBox2)
         GroupBox1.Controls.Add(CheckBoxDrawFocalPoints)
         GroupBox1.Controls.Add(CheckBoxDrawPrincipalPoints)
         GroupBox1.Controls.Add(CheckBoxDrawFocalPlanes)
@@ -202,21 +210,86 @@ Partial Class Form1
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(614, 180)
+        GroupBox1.Size = New Size(614, 247)
         GroupBox1.TabIndex = 14
         GroupBox1.TabStop = False
         GroupBox1.Text = "Compute First Order Properties"
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(GeneralButton)
+        GroupBox2.Controls.Add(NFixedButton)
+        GroupBox2.Controls.Add(FixedButton)
+        GroupBox2.Controls.Add(Label3)
+        GroupBox2.Controls.Add(nDigitsTextBox)
+        GroupBox2.Location = New Point(395, 92)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(160, 142)
+        GroupBox2.TabIndex = 13
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Number format"
+        ' 
+        ' GeneralButton
+        ' 
+        GeneralButton.AutoSize = True
+        GeneralButton.Location = New Point(6, 81)
+        GeneralButton.Name = "GeneralButton"
+        GeneralButton.Size = New Size(81, 24)
+        GeneralButton.TabIndex = 13
+        GeneralButton.Text = "General"
+        GeneralButton.UseVisualStyleBackColor = True
+        ' 
+        ' NFixedButton
+        ' 
+        NFixedButton.AutoSize = True
+        NFixedButton.Location = New Point(6, 53)
+        NFixedButton.Name = "NFixedButton"
+        NFixedButton.Size = New Size(133, 24)
+        NFixedButton.TabIndex = 12
+        NFixedButton.Text = "Fixed (1,234.56)"
+        NFixedButton.UseVisualStyleBackColor = True
+        ' 
+        ' FixedButton
+        ' 
+        FixedButton.AutoSize = True
+        FixedButton.Checked = True
+        FixedButton.Location = New Point(6, 25)
+        FixedButton.Name = "FixedButton"
+        FixedButton.Size = New Size(130, 24)
+        FixedButton.TabIndex = 11
+        FixedButton.TabStop = True
+        FixedButton.Text = "Fixed (1234.56)"
+        FixedButton.UseVisualStyleBackColor = True
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(6, 113)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(77, 20)
+        Label3.TabIndex = 10
+        Label3.Text = "# of digits"
+        ' 
+        ' nDigitsTextBox
+        ' 
+        nDigitsTextBox.Font = New Font("Microsoft Sans Serif", 9.0F)
+        nDigitsTextBox.Location = New Point(89, 111)
+        nDigitsTextBox.Name = "nDigitsTextBox"
+        nDigitsTextBox.Size = New Size(39, 24)
+        nDigitsTextBox.TabIndex = 9
+        nDigitsTextBox.Text = "5"
+        nDigitsTextBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' txtLog
         ' 
         txtLog.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         txtLog.Font = New Font("Courier New", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtLog.Location = New Point(22, 427)
+        txtLog.Location = New Point(22, 494)
         txtLog.Margin = New Padding(3, 4, 3, 4)
         txtLog.Multiline = True
         txtLog.Name = "txtLog"
         txtLog.ReadOnly = True
-        txtLog.Size = New Size(607, 244)
+        txtLog.Size = New Size(614, 227)
         txtLog.TabIndex = 15
         ' 
         ' PictureBox1
@@ -267,9 +340,9 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(643, 688)
+        ClientSize = New Size(643, 738)
         Controls.Add(btnSampleLens)
         Controls.Add(LinkLabel1)
         Controls.Add(chkUseLTSelection)
@@ -287,6 +360,8 @@ Partial Class Form1
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -312,5 +387,11 @@ Partial Class Form1
     Friend WithEvents chkUseLTSelection As CheckBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents btnSampleLens As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents nDigitsTextBox As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GeneralButton As RadioButton
+    Friend WithEvents NFixedButton As RadioButton
+    Friend WithEvents FixedButton As RadioButton
 
 End Class
