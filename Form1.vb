@@ -4,8 +4,13 @@ Imports FirstOrderLensProperties.LTConnect
 Imports System.Reflection
 Public Class Form1
 
-    Public Version = "1.0.1"
+    Public Version = "v1.0.2"
     ''' <summary>
+    ''' November 09th, 2025
+    ''' Version v1.0.2
+    ''' Tweaked UI and messages for clarity
+    ''' Added AddWarning...
+    ''' Modified 0.000001 equality of EFLs to Warning instead of Error
     ''' November 03rd, 2025
     ''' * Updated how the LT pointer is obtained, using JS reference.
     ''' * Added UI components to select first and the last surface.
@@ -24,6 +29,10 @@ Public Class Form1
     Public Sub ComputeFirstOrderLensProperties() Handles Button1.Click
 
         ' MsgBox("Hello")
+        ErrorCheck.ClearWarnings()
+        ' ErrorCheck.AddWarningIfFalse(False, "hopp")
+        ' ErrorCheck.AddWarningIfFalse(False, "hopp2")
+
         Dim lt As LightTools.LTAPI4
         lt = GetLTAPIServer()
         If chkUseLTSelection.Checked = False Then
@@ -34,25 +43,36 @@ Public Class Form1
             SelSurf2 = SelSurf2.Replace(":", ".")
             lt.Cmd("\V3D Select " & lt.Str(SelSurf1) & " More " & lt.Str(SelSurf2))
         End If
-        Dim MsgStr As String = "-------------------------" & vbCrLf
-        MsgStr = MsgStr + "FirstOrderLensProperties " & Version & " J.Muschaweck" & vbCrLf
+        Dim MsgStr As String = ""
         Dim dbupdate_sav = lt.GetOption("DBUPDATE")
         Dim viewupdate_sav = lt.GetOption("VIEWUPDATE")
         lt.SetOption("DBUPDATE", 0)
         lt.SetOption("VIEWUPDATE", 0)
+        Dim newline = Environment.NewLine
         Try
             Dim paraxResult = TraceParaxialRays()
             Dim cardinalPoints = GetCardinalPoints(paraxResult.parax, paraxResult.rf1, paraxResult.rf2, paraxResult.rb1, paraxResult.rb2)
-            MsgStr = MsgStr + "front focus: " & VecToString3D(cardinalPoints.focus_front_) & ", back focus: " & VecToString3D(cardinalPoints.focus_back_) & vbCrLf
-            MsgStr = MsgStr + "front principal: " & VecToString3D(cardinalPoints.principal_front_) & ", back principal: " & VecToString3D(cardinalPoints.principal_back_) & vbCrLf
+            If chkUseLTSelection.Checked Then
+                MsgStr = MsgStr + "Found " + paraxResult.surfaces.Length.ToString + " lens surfaces in selection" + newline
+            End If
+            MsgStr = MsgStr + "front focus:     " & VecToString3D(cardinalPoints.focus_front_) + newline
+            MsgStr = MsgStr + "back focus:      " & VecToString3D(cardinalPoints.focus_back_) & newline
+            MsgStr = MsgStr + "front principal: " & VecToString3D(cardinalPoints.principal_front_) & newline
+            MsgStr = MsgStr + "back principal:  " & VecToString3D(cardinalPoints.principal_back_) & newline
             Dim focalLengths = ComputeFocalLengths(cardinalPoints)
-            MsgStr = MsgStr + "EFL = " & focalLengths.EFL.ToString() & " FFL = " & focalLengths.FFL.ToString() & ", BFL = " & focalLengths.BFL.ToString()
+            MsgStr = MsgStr + "EFL = " & focalLengths.EFL.ToString() & newline
+            MsgStr = MsgStr + "FFL = " & focalLengths.FFL.ToString() & newline
+            MsgStr = MsgStr + "BFL = " & focalLengths.BFL.ToString()
             DrawGeometry(cardinalPoints)
-            lt.Message(MsgStr)
-            txtLog.Text = MsgStr
+            MsgStr = AppendWarningsToString(MsgStr)
         Catch ex As Exception
-            lt.Message(ex.Message)
+            MsgStr = AppendWarningsToString(MsgStr)
+            MsgStr = MsgStr + Environment.NewLine + "Error: " + ex.Message
+        Finally
             txtLog.Text = MsgStr
+            lt.Message("-------------------------")
+            lt.Message("FirstOrderLensProperties " & Version & " J.Muschaweck")
+            lt.Message(MsgStr)
         End Try
         lt.SetOption("DBUPDATE", dbupdate_sav)
         lt.SetOption("VIEWUPDATE", viewupdate_sav)

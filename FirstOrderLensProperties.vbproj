@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <Title>LightTools first order lens properties</Title>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Julius Muschaweck</Authors>
     <Company>JMO Illumination Optics</Company>
     <Description>A LightTools add-on to compute first order properties of a compound lens, such as equivalent/back/front focal length. Written in VB .NET using Visual Studio 2022</Description>

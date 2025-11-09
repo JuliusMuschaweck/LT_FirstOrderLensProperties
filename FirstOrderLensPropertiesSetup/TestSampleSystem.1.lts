@@ -1,0 +1,1889 @@
+#ORACAD Database File - Version 8.6
+#LightTools 2025.03 
+#Build: 2025.03.14.0949.43632136 [x64]
+$ORALensDatabaseManagerObj create -> $ORALensDatabaseManagerObj_0
+{
+	restoreObjectCounter: 36;
+	setCurrentColor: "FOREGROUND";
+	setCurrentPointSize: 1;
+	setWidthAsInt: 1;
+	setUnits: "Millimeters";
+	setPolarizationOn: "No";
+	setRDM: "Radius";
+	setFociRenderMode: "Yes";
+	setHiddenWireframeRenderMode: "Yes";
+	setSaveUserMaterial: "Yes";
+	setSaveUserCoating: "Yes";
+	setSaveUserBSDF: "Yes";
+	setEnableLTSFileVersioning: "Yes";
+	setTitle: "";
+	setObjectDeleteConfirm: "No";
+	setDiscardChangesConfirm: "No";
+	setSwitchOptEngineConfirm: "Yes";
+	setClearOptimizationResultsConfirm: "Yes";
+	setReplaceLensPrimitivesConfirm: "Yes";
+	setRaytraceNumFanRays: 11;
+	setRaytraceFanSpacing: "Equiangle";
+	setRaytraceDefaultStartingPointClassification: "Automatic";
+	setRaytraceDefaultStartingPointRCElementName: "";
+	setRaytraceNumGridCols: 11;
+	setRaytraceNumGridRows: 11;
+	setRaytraceGridSpacing: "Equiangle";
+	setGUIPrecision: 7;
+	setGUIPrecisionFormat: "General";
+	setUseRayCountThousandsSeparator: "Yes";
+	setRepairDoSimplify: 1;
+	setRepairSimplifyTol: 0.;
+	setRepairDoStitch: 1;
+	setRepairStitchMinTol: 0.;
+	setRepairStitchMaxTol: 0.;
+	setRepairDoGeombuild: 1;
+	setRepairGeombuildTol: 0.;
+	setRepairDoRegularize: 1;
+	setImperfectGeometryRaytraceMode: 0;
+	setImportCoordSys: "Yes";
+	setDefaultLensAutoID: "Yes";
+	setDefaultClipRaysToBoundary: "Yes";
+	setMaxDraw3DTextureCells: 100000;
+	setMaxDraw2DTextureCells: 300000;
+	setConvert3DTextureToRealGeom: "No";
+	setTrimTextureToOffsetSurf: "No";
+	setDefaultHitLimit: 1000;
+	restoreDefaultRayPowerThreshold: 0.001;
+	setSolidWorksIdleTimeoutValue: 60;
+	setSolidWorksDisplayNameOption: "SolidWorks";
+	setDefaultRandomAccessRDS: "Yes";
+	restoreRayRenderMode: "Dotted Surface Interaction";
+	restoreShowArrowheads: "No";
+	restoreArrowheadScale: 1.;
+	setIgnoreEntityLevelRTASettings: "No";
+	setApproximatedRayTrace: "Precision";
+	setRayTraceAccelLevel: "Ultra High Accuracy";
+	setCollectSourceScalingData: "Yes";
+	setCoherentMode: "No";
+	setNormalizeCoherentSources: "Yes";
+	setExportFieldComponentsAsSeparateFiles: "No";
+	restoreEnableDirectionReferenceControl: "No";
+	setCurrentLayerNumber: "1";
+	getOpticalPropertiesManager -> $OpticalPropertiesManager_0
+	{
+		$OpticalProperties create -> $OpticalProperties_0
+		{
+			setName: "Transmitting";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_0
+			{
+				setRed: 128;
+				setGreen: 0;
+				setBlue: 255;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_0;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_0
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_0
+				{
+					setReflectance: 0.;
+					setTransmittance: 1.;
+				} setAmplitude: $ORARTRayAmplitudeObj_0;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_0
+				{
+					setRefractMode: "TIR";
+				} setDirection: $ORASpecularRayDirectionObj_0;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_0;
+		} restoreOpticalProperty: $OpticalProperties_0;
+		$OpticalProperties create -> $OpticalProperties_1
+		{
+			setName: "Optical Absorber";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_1
+			{
+				setRed: 157;
+				setGreen: 98;
+				setBlue: 106;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_1;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_1
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_1
+				{
+					setReflectance: 0.;
+					setTransmittance: 0.;
+				} setAmplitude: $ORARTRayAmplitudeObj_1;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_1
+				{
+					setRefractMode: "Absorb";
+				} setDirection: $ORASpecularRayDirectionObj_1;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_1;
+		} restoreOpticalProperty: $OpticalProperties_1;
+		$OpticalProperties create -> $OpticalProperties_2
+		{
+			setName: "Mechanical Absorber";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_2
+			{
+				setRed: 109;
+				setGreen: 123;
+				setBlue: 146;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_2;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_2
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_2
+				{
+					setReflectance: 0.;
+					setTransmittance: 0.;
+				} setAmplitude: $ORARTRayAmplitudeObj_2;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_2
+				{
+					setRefractMode: "Mechanical";
+				} setDirection: $ORASpecularRayDirectionObj_2;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_2;
+		} restoreOpticalProperty: $OpticalProperties_2;
+		$OpticalProperties create -> $OpticalProperties_3
+		{
+			setName: "DefaultCVCoating";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_3
+			{
+				setRed: 17;
+				setGreen: 77;
+				setBlue: 37;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_3;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_3
+			{
+				$ThinFilmStackCoating create -> $ThinFilmStackCoating_0
+				{
+					restoreFilename: "";
+					restoreStackDataOPRXformat: "22 serialization::archive 19 0 0 60 
+LightTools 2025.03   Build: 2025.03.14.0949.43632136 [x64]
+ 0 13 ThinFilmStack 0 0 8 0 0 0 0 0 0 0 0 16 DefaultCVCoating 20 ThinFilmStackCoating 0
+22 serialization::archive 19 0 0 1 1 4
+0 18 Default CV Coating 0 0 0 0 0 5.87559997558593750e+02 1.50000000000000000e+00 1.00000000000000000e+00 0 0 1 0 0 0 6 1 0
+1 1.06442028911017090e+02 7 28 osg::thinfilm::LocalMaterial 1 0
+2 0 0 14 AutoMat_Layer1 0 0 1 0 0 0 5.87559997558593750e+02 1.37999999523162842e+00 0.00000000000000000e+00 0 0 1 0 0 0 7 2 0 0 14 29 osg::thinfilm::UniformScaling 1 0
+3 0 0 1.00000000000000000e+00 0
+";
+					$ThinFilmStackEvaluator create -> $ThinFilmStackEvaluator_0
+					{
+						changeAOI: 0.;
+						changeWavelength: 550.;
+						changeMinWavelength: 380.;
+						changeMaxWavelength: 760.;
+						changeNumWavelengthSteps: 77;
+						setSubstrateIndex: 1.5;
+						setAmbientIndex: 1.;
+						changeMinAOI: 0.;
+						changeMaxAOI: 80.;
+						changeNumAOISteps: 17;
+						changeResolutionWl: 5.;
+						changeResolutionAOI: 5.;
+					} restoreEvaluator: $ThinFilmStackEvaluator_0;
+				} setAmplitude: $ThinFilmStackCoating_0;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_3
+				{
+					setRefractMode: "Split";
+				} setDirection: $ORASpecularRayDirectionObj_3;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_3;
+		} restoreOpticalProperty: $OpticalProperties_3;
+		$OpticalProperties create -> $OpticalProperties_4
+		{
+			setName: "TransmitOnly";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_4
+			{
+				setRed: 17;
+				setGreen: 77;
+				setBlue: 37;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_4;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_4
+			{
+				$ThinFilmStackCoating create -> $ThinFilmStackCoating_1
+				{
+					restoreFilename: "";
+					restoreStackDataOPRXformat: "22 serialization::archive 19 0 0 60 
+LightTools 2025.03   Build: 2025.03.14.0949.43632136 [x64]
+ 0 13 ThinFilmStack 0 0 8 0 0 0 0 0 0 0 0 12 TransmitOnly 20 ThinFilmStackCoating 0
+22 serialization::archive 19 0 0 1 1 4
+0 18 Default CV Coating 0 0 0 0 0 5.87559997558593750e+02 1.50000000000000000e+00 1.00000000000000000e+00 0 0 1 0 0 0 6 1 0
+1 1.06442028911017090e+02 7 28 osg::thinfilm::LocalMaterial 1 0
+2 0 0 14 AutoMat_Layer1 0 0 1 0 0 0 5.87559997558593750e+02 1.37999999523162842e+00 0.00000000000000000e+00 0 0 1 0 0 0 7 2 0 0 14 29 osg::thinfilm::UniformScaling 1 0
+3 0 0 1.00000000000000000e+00 0
+";
+					$ThinFilmStackEvaluator create -> $ThinFilmStackEvaluator_1
+					{
+						changeAOI: 0.;
+						changeWavelength: 550.;
+						changeMinWavelength: 380.;
+						changeMaxWavelength: 760.;
+						changeNumWavelengthSteps: 77;
+						setSubstrateIndex: 1.5;
+						setAmbientIndex: 1.;
+						changeMinAOI: 0.;
+						changeMaxAOI: 80.;
+						changeNumAOISteps: 17;
+						changeResolutionWl: 5.;
+						changeResolutionAOI: 5.;
+					} restoreEvaluator: $ThinFilmStackEvaluator_1;
+				} setAmplitude: $ThinFilmStackCoating_1;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_4
+				{
+					setRefractMode: "Refract";
+				} setDirection: $ORASpecularRayDirectionObj_4;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_4;
+		} restoreOpticalProperty: $OpticalProperties_4;
+		$OpticalProperties create -> $OpticalProperties_5
+		{
+			setName: "Refractive Surfaces";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_5
+			{
+				setRed: 128;
+				setGreen: 0;
+				setBlue: 255;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_5;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_5
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_3
+				{
+					setReflectance: 0.;
+					setTransmittance: 1.;
+				} setAmplitude: $ORARTRayAmplitudeObj_3;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_5
+				{
+					setRefractMode: "TIR";
+				} setDirection: $ORASpecularRayDirectionObj_5;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_5;
+		} restoreDefaultOpticalProperty: $OpticalProperties_5;
+		$OpticalProperties create -> $OpticalProperties_6
+		{
+			setName: "Reflective Surfaces";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_6
+			{
+				setRed: 0;
+				setGreen: 64;
+				setBlue: 64;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_6;
+			$ORASimpleMirrorOpticalPropertiesObj create -> $ORASimpleMirrorOpticalPropertiesObj_0
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_4
+				{
+					setReflectance: 1.;
+					setTransmittance: 0.;
+				} setAmplitude: $ORARTRayAmplitudeObj_4;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_6
+				{
+					setRefractMode: "Reflect";
+				} setDirection: $ORASpecularRayDirectionObj_6;
+			} restoreProperty: $ORASimpleMirrorOpticalPropertiesObj_0;
+		} restoreDefaultOpticalProperty: $OpticalProperties_6;
+		$OpticalProperties create -> $OpticalProperties_7
+		{
+			setName: "Surfaces on Sources";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_7
+			{
+				setRed: 255;
+				setGreen: 128;
+				setBlue: 64;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_7;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_6
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_5
+				{
+					setReflectance: 0.;
+					setTransmittance: 1.;
+				} setAmplitude: $ORARTRayAmplitudeObj_5;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_7
+				{
+					setRefractMode: "TIR";
+				} setDirection: $ORASpecularRayDirectionObj_7;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_6;
+		} restoreDefaultOpticalProperty: $OpticalProperties_7;
+		$OpticalProperties create -> $OpticalProperties_8
+		{
+			setName: "Imported Geometry";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_8
+			{
+				setRed: 184;
+				setGreen: 115;
+				setBlue: 230;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_8;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_7
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_6
+				{
+					setReflectance: 0.;
+					setTransmittance: 1.;
+				} setAmplitude: $ORARTRayAmplitudeObj_6;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_8
+				{
+					setRefractMode: "TIR";
+				} setDirection: $ORASpecularRayDirectionObj_8;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_7;
+		} restoreDefaultOpticalProperty: $OpticalProperties_8;
+		$OpticalProperties create -> $OpticalProperties_9
+		{
+			setName: "Optical Edge Surfaces";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_9
+			{
+				setRed: 157;
+				setGreen: 98;
+				setBlue: 106;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_9;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_8
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_7
+				{
+					setReflectance: 0.;
+					setTransmittance: 0.;
+				} setAmplitude: $ORARTRayAmplitudeObj_7;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_9
+				{
+					setRefractMode: "Absorb";
+				} setDirection: $ORASpecularRayDirectionObj_9;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_8;
+		} restoreDefaultOpticalProperty: $OpticalProperties_9;
+		$OpticalProperties create -> $OpticalProperties_10
+		{
+			setName: "Mechanical Surfaces";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_10
+			{
+				setRed: 109;
+				setGreen: 123;
+				setBlue: 146;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_10;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_9
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_8
+				{
+					setReflectance: 0.;
+					setTransmittance: 0.;
+				} setAmplitude: $ORARTRayAmplitudeObj_8;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_10
+				{
+					setRefractMode: "Mechanical";
+				} setDirection: $ORASpecularRayDirectionObj_10;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_9;
+		} restoreDefaultOpticalProperty: $OpticalProperties_10;
+		$OpticalProperties create -> $OpticalProperties_11
+		{
+			setName: "User-Created Zones";
+			$ORAColorComponentObj create -> $ORAColorComponentObj_11
+			{
+				setRed: 20;
+				setGreen: 60;
+				setBlue: 107;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} restoreColorComponent: $ORAColorComponentObj_11;
+			$ORAAmplDirOpticalPropertiesObj create -> $ORAAmplDirOpticalPropertiesObj_10
+			{
+				$ORARTRayAmplitudeObj create -> $ORARTRayAmplitudeObj_9
+				{
+					setReflectance: 0.;
+					setTransmittance: 1.;
+				} setAmplitude: $ORARTRayAmplitudeObj_9;
+				$ORASpecularRayDirectionObj create -> $ORASpecularRayDirectionObj_11
+				{
+					setRefractMode: "TIR";
+				} setDirection: $ORASpecularRayDirectionObj_11;
+			} restoreProperty: $ORAAmplDirOpticalPropertiesObj_10;
+		} restoreDefaultOpticalProperty: $OpticalProperties_11;
+	} ;
+	getUserMaterialManager -> $ORAUserMaterialManagerObj_0
+	{
+		$ORAUserGlassInstanceObj create -> $ORAUserGlassInstanceObj_0;
+		initObject: $ORAUserGlassInstanceObj_0;
+		$ORAUserGlassInstanceObj_0
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "air";
+			$ORALaurentIndexObj create -> $ORALaurentIndexObj_0
+			{
+				setIndexCoeff1: 0.;
+				setIndexCoeff0: 1.;
+			} restoreIndexObj: $ORALaurentIndexObj_0;
+restoreSerializedAbsorptionObj:
+ORAStartData;
+0000180000004f70746963616c44656e736974794162736f727074696f6e0101000000000000000001000000140000004f70746963616c2044656e7369747920446174610100000000010000000000000000000000000000000000000100000000000000000000000000000000003081400000000000000000
+ORAEndData;
+ORAReadForeignData;
+		} restoreObject: $ORAUserGlassInstanceObj_0;
+	} ;
+	getPreferencesManager -> $ORAPreferencesManagerObj_0
+	{
+		setDefaultOpticalMaterial: "NBK7";
+		setDefaultMediaMaterial: "AIR";
+		setDefaultAllPurposeMaterial: "PMMA_USER";
+		setDefaultMechanicalMaterial: "ALUMINUM";
+		setDefaultSourceMaterial: "AIR";
+		setDefaultSheetMaterial: "ALUMINUM";
+		setDefaultOpticalMaterialCatalog: "SCHOTT";
+		setDefaultMediaMaterialCatalog: "USER";
+		setDefaultAllPurposeMaterialCatalog: "PLASTIC";
+		setDefaultMechanicalMaterialCatalog: "USER";
+		setDefaultSourceMaterialCatalog: "USER";
+		setDefaultSheetMaterialCatalog: "USER";
+		setOptimizationVariableColor: 255;
+		setOptimizationConstraintColor: 16711935;
+		setOptimizationMeritFunctionItemColor: 16711680;
+		setTolToleranceColor: 16234828;
+		setTolPerformanceMeasureColor: 37828;
+		setOutsideCellColor: 16776960;
+		setBoundaryCellColor: 65535;
+		setPickupParameterColor: 25855;
+		setSurfaceOptions: "Element in Solid Mode";
+		setImageSurfaceMode: "Absorbing";
+		setFixCoincidentSurfaces: "Yes";
+		setTraceDummySurface: "No";
+		setDisplayDFManagerOnImport: "Yes";
+		setTraceAllReferenceRays: "Yes";
+		setTraceTangentialFan: "Yes";
+		setTraceSagittalFan: "Yes";
+		setCreateRefRaysPolylines: "No";
+		setTreatStandaloneStopSurfaceAs: "Oversized Surface with Absorbing Property";
+		setCodeVConnectionTimeout: 300;
+		setEstimateFreeformCurvature: "Yes";
+		setFFConversionCurvature: 0.;
+		setFFConversionConicConstant: 0.;
+		setHalfApertureSizeAsNRadius: "Yes";
+		setFFConversionNormalizingRadius: 1.;
+		setFFConversionMaximumOrder: 10;
+		setFFConversionClipThreshold: 1.0e-08;
+		setLensShapePreference: "Sphere";
+		setSectionSurfaceOption: "Show Solid Surface";
+		setSectionSurfaceColorOption: "Section Plane Color";
+		setInteriorColorOption: "Surface Color";
+		setSectionSurfaceOpacity: 48;
+		setInteriorFacesColor: 15615;
+		setSection1Color: 255;
+		setSection2Color: 65280;
+		setSection3Color: 16711680;
+		setDefaultSection1PlaneType: "YZ";
+		setDefaultSection2PlaneType: "XZ";
+		setDefaultSection3PlaneType: "XY";
+	} ;
+	getStudioManager -> $ORAStudioManagerObj_0
+	{
+		getLightDB -> $ORALightDBObj_0
+		{
+			$PRRAmbientLight create -> $PRRAmbientLight_0;
+			initObject: $PRRAmbientLight_0;
+			$PRRAmbientLight_0
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "ambient light";
+				setPosition:  { 0. 0. 0.  } ;
+				setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				setEnabledLight: "No";
+			} restoreObject: $PRRAmbientLight_0;
+		} ;
+	} ;
+	getGeometryManager -> $ORAPartDBObj_0
+	{
+		$SurfacePairLens create -> $SurfacePairLens_0;
+		initObject: $SurfacePairLens_0;
+		$SurfacePairLens_0
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "LensElement_1";
+			setPosition:  { 0. 0. 1.  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "NBK7_SCHOTT";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			getCSGTree -> $ORACSGTreeObj_0;
+			$CSGLensElementPrimitive create -> $CSGLensElementPrimitive_0
+			{
+				setPosition:  { 0. 0. 0.  } ;
+				setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				setName: "LensElementPrimitive_1";
+				restoreSolidMode: "Yes";
+				$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_0
+				{
+					setSurfaceNumber: 0;
+					setSurfaceName: "EdgeSurface";
+					setMaxHits: 1000;
+					setHighestZoneId: 0;
+					$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_0
+					{
+						setName: "BareSurface";
+						setPropertiesName: "Optical Absorber";
+					} setBareSurfaceProperties: $ORAPropertyZoneObj_0;
+				} addSurfaceInfo: $ORASurfaceInfoObj_0;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_0
+				{
+					setPosition:  { 0. 0. 0.  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "FirstLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_0
+					{
+						setCurvature: 0.071353964082514;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_0;
+					setWidth: 13.54813508620021;
+					setHeight: 13.54813508620021;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_1
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "FirstSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_1
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_1;
+					} addSurfaceInfo: $ORASurfaceInfoObj_1;
+				} restorePrimitive: $CSGLensSurfacePrimitive_0;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_1
+				{
+					setPosition:  { 0. 0. 6.425745663868677  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "SecondLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_1
+					{
+						setCurvature: -0.087867202024842;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_1;
+					setWidth: 13.54813508620021;
+					setHeight: 13.54813508620021;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_2
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "SecondSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_2
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_2;
+					} addSurfaceInfo: $ORASurfaceInfoObj_2;
+				} restorePrimitive: $CSGLensSurfacePrimitive_1;
+				setUseFirstSurfaceBoundaryAsAperture: "No";
+				setApertureType: "Primitive";
+				setElementShape: "Circular";
+				setWidth: 13.54813508620021;
+				setHeight: 13.54813508620021;
+				restoreTrimOverlappingSurfaces: "No";
+			} restoreRootNode: $CSGLensElementPrimitive_0;
+		} restoreObject: $SurfacePairLens_0;
+		$SurfacePairLens create -> $SurfacePairLens_1;
+		initObject: $SurfacePairLens_1;
+		$SurfacePairLens_1
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "LensElement_2";
+			setPosition:  { 0. 0. 11.  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "NBK7_SCHOTT";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			getCSGTree -> $ORACSGTreeObj_1;
+			$CSGLensElementPrimitive create -> $CSGLensElementPrimitive_1
+			{
+				setPosition:  { 0. 0. 0.  } ;
+				setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				setName: "LensElementPrimitive_1";
+				restoreSolidMode: "Yes";
+				$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_3
+				{
+					setSurfaceNumber: 0;
+					setSurfaceName: "EdgeSurface";
+					setMaxHits: 1000;
+					setHighestZoneId: 0;
+					$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_3
+					{
+						setName: "BareSurface";
+						setPropertiesName: "Optical Absorber";
+					} setBareSurfaceProperties: $ORAPropertyZoneObj_3;
+				} addSurfaceInfo: $ORASurfaceInfoObj_3;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_2
+				{
+					setPosition:  { 0. 0. 0.  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "FirstLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_2
+					{
+						setCurvature: 0.;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_2;
+					setWidth: 13.54813508620021;
+					setHeight: 13.54813508620021;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_4
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "FirstSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_4
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_4;
+					} addSurfaceInfo: $ORASurfaceInfoObj_4;
+				} restorePrimitive: $CSGLensSurfacePrimitive_2;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_3
+				{
+					setPosition:  { 0. 0. 6.425745663868677  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "SecondLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_3
+					{
+						setCurvature: 0.05;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_3;
+					setWidth: 13.54813508620021;
+					setHeight: 13.54813508620021;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_5
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "SecondSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_5
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_5;
+					} addSurfaceInfo: $ORASurfaceInfoObj_5;
+				} restorePrimitive: $CSGLensSurfacePrimitive_3;
+				setUseFirstSurfaceBoundaryAsAperture: "No";
+				setApertureType: "Primitive";
+				setElementShape: "Circular";
+				setWidth: 13.54813508620021;
+				setHeight: 13.54813508620021;
+				restoreTrimOverlappingSurfaces: "No";
+			} restoreRootNode: $CSGLensElementPrimitive_1;
+		} restoreObject: $SurfacePairLens_1;
+		$PointEntity create -> $PointEntity_0;
+		initObject: $PointEntity_0;
+		$PointEntity_0
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontFocalPoint";
+			setPosition:  { 0. 0. -14.6961461619232  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_0;
+		$PointEntity create -> $PointEntity_1;
+		initObject: $PointEntity_1;
+		$PointEntity_1
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackFocalPoint";
+			setPosition:  { 0. 0. 21.12605923817343  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_1;
+		$PointEntity create -> $PointEntity_2;
+		initObject: $PointEntity_2;
+		$PointEntity_2
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontPrincipalPoint";
+			setPosition:  { 0. 0. -0.166322293999702  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_2;
+		$PointEntity create -> $PointEntity_3;
+		initObject: $PointEntity_3;
+		$PointEntity_3
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackPrincipalPoint";
+			setPosition:  { 0. 0. 6.596237822427829  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_3;
+		$ORAPlaneInterfaceObj create -> $ORAPlaneInterfaceObj_0;
+		initObject: $ORAPlaneInterfaceObj_0;
+		$ORAPlaneInterfaceObj_0
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontFocalPlane";
+			setPosition:  { 0. 0. -14.6961461619232  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "air_USER";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			setClipWidth: 10.;
+			setClipHeight: 10.;
+			setClipBoundary: "Yes";
+			$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_6
+			{
+				setSurfaceNumber: 0;
+				setSurfaceName: "DummyPlane";
+				setMaxHits: 1000;
+				setHighestZoneId: 0;
+				$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_6
+				{
+					$ORARectangular2DZoneObj create -> $ORARectangular2DZoneObj_0;
+					setBoundary: $ORARectangular2DZoneObj_0;
+					$ORARectangular2DZoneObj_0
+					{
+						setColor: "FOREGROUND";
+						setWidth: "1";
+						setLayerNumber: "1";
+						setOriginObj:  { 0. 0.  } ;
+						setTheta: 0.;
+						setUserDefined: "No";
+						setName: "RectangularZone";
+						setZoneWidth: 10.;
+						setZoneHeight: 10.;
+					} ;
+					setName: "BareSurface";
+					setPropertiesName: "H_iddenPropert_y";
+				} setBareSurfaceProperties: $ORAPropertyZoneObj_6;
+			} addSurfaceInfo: $ORASurfaceInfoObj_6;
+		} restoreObject: $ORAPlaneInterfaceObj_0;
+		$ORAPlaneInterfaceObj create -> $ORAPlaneInterfaceObj_1;
+		initObject: $ORAPlaneInterfaceObj_1;
+		$ORAPlaneInterfaceObj_1
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackFocalPlane";
+			setPosition:  { 0. 0. 21.12605923817343  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "air_USER";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			setClipWidth: 10.;
+			setClipHeight: 10.;
+			setClipBoundary: "Yes";
+			$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_7
+			{
+				setSurfaceNumber: 0;
+				setSurfaceName: "DummyPlane";
+				setMaxHits: 1000;
+				setHighestZoneId: 0;
+				$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_7
+				{
+					$ORARectangular2DZoneObj create -> $ORARectangular2DZoneObj_1;
+					setBoundary: $ORARectangular2DZoneObj_1;
+					$ORARectangular2DZoneObj_1
+					{
+						setColor: "FOREGROUND";
+						setWidth: "1";
+						setLayerNumber: "1";
+						setOriginObj:  { 0. 0.  } ;
+						setTheta: 0.;
+						setUserDefined: "No";
+						setName: "RectangularZone";
+						setZoneWidth: 10.;
+						setZoneHeight: 10.;
+					} ;
+					setName: "BareSurface";
+					setPropertiesName: "H_iddenPropert_y";
+				} setBareSurfaceProperties: $ORAPropertyZoneObj_7;
+			} addSurfaceInfo: $ORASurfaceInfoObj_7;
+		} restoreObject: $ORAPlaneInterfaceObj_1;
+		$ORAPlaneInterfaceObj create -> $ORAPlaneInterfaceObj_2;
+		initObject: $ORAPlaneInterfaceObj_2;
+		$ORAPlaneInterfaceObj_2
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontPrincipalPlane";
+			setPosition:  { 0. 0. -0.166322293999702  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "air_USER";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			setClipWidth: 10.;
+			setClipHeight: 10.;
+			setClipBoundary: "Yes";
+			$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_8
+			{
+				setSurfaceNumber: 0;
+				setSurfaceName: "DummyPlane";
+				setMaxHits: 1000;
+				setHighestZoneId: 0;
+				$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_8
+				{
+					$ORARectangular2DZoneObj create -> $ORARectangular2DZoneObj_2;
+					setBoundary: $ORARectangular2DZoneObj_2;
+					$ORARectangular2DZoneObj_2
+					{
+						setColor: "FOREGROUND";
+						setWidth: "1";
+						setLayerNumber: "1";
+						setOriginObj:  { 0. 0.  } ;
+						setTheta: 0.;
+						setUserDefined: "No";
+						setName: "RectangularZone";
+						setZoneWidth: 10.;
+						setZoneHeight: 10.;
+					} ;
+					setName: "BareSurface";
+					setPropertiesName: "H_iddenPropert_y";
+				} setBareSurfaceProperties: $ORAPropertyZoneObj_8;
+			} addSurfaceInfo: $ORASurfaceInfoObj_8;
+		} restoreObject: $ORAPlaneInterfaceObj_2;
+		$ORAPlaneInterfaceObj create -> $ORAPlaneInterfaceObj_3;
+		initObject: $ORAPlaneInterfaceObj_3;
+		$ORAPlaneInterfaceObj_3
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackPrincipalPlane";
+			setPosition:  { 0. 0. 6.596237822427829  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "air_USER";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			setClipWidth: 10.;
+			setClipHeight: 10.;
+			setClipBoundary: "Yes";
+			$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_9
+			{
+				setSurfaceNumber: 0;
+				setSurfaceName: "DummyPlane";
+				setMaxHits: 1000;
+				setHighestZoneId: 0;
+				$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_9
+				{
+					$ORARectangular2DZoneObj create -> $ORARectangular2DZoneObj_3;
+					setBoundary: $ORARectangular2DZoneObj_3;
+					$ORARectangular2DZoneObj_3
+					{
+						setColor: "FOREGROUND";
+						setWidth: "1";
+						setLayerNumber: "1";
+						setOriginObj:  { 0. 0.  } ;
+						setTheta: 0.;
+						setUserDefined: "No";
+						setName: "RectangularZone";
+						setZoneWidth: 10.;
+						setZoneHeight: 10.;
+					} ;
+					setName: "BareSurface";
+					setPropertiesName: "H_iddenPropert_y";
+				} setBareSurfaceProperties: $ORAPropertyZoneObj_9;
+			} addSurfaceInfo: $ORASurfaceInfoObj_9;
+		} restoreObject: $ORAPlaneInterfaceObj_3;
+		$SurfacePairLens create -> $SurfacePairLens_2;
+		initObject: $SurfacePairLens_2;
+		$SurfacePairLens_2
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "LensElement_29";
+			setPosition:  { 0. 18.93710892279072 1.684013228551422  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			setIsRayTraceable: "Yes";
+			setMaterialName: "NBK7_SCHOTT";
+			setRayTraceType: "Solid Trace";
+			setOverridesSystemEnvironment: "No";
+			setSpecifiedTemperature: 22.;
+			setSpecifiedPressure: 760.;
+			getCSGTree -> $ORACSGTreeObj_2;
+			$CSGLensElementPrimitive create -> $CSGLensElementPrimitive_2
+			{
+				setPosition:  { 0. 0. 0.  } ;
+				setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				setName: "LensElementPrimitive_2";
+				restoreSolidMode: "Yes";
+				$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_10
+				{
+					setSurfaceNumber: 0;
+					setSurfaceName: "EdgeSurface";
+					setMaxHits: 1000;
+					setHighestZoneId: 0;
+					$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_10
+					{
+						setName: "BareSurface";
+						setPropertiesName: "Optical Absorber";
+					} setBareSurfaceProperties: $ORAPropertyZoneObj_10;
+				} addSurfaceInfo: $ORASurfaceInfoObj_10;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_4
+				{
+					setPosition:  { 0. 0. 0.  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "FirstLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_4
+					{
+						setCurvature: -0.074790354277975;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_4;
+					setWidth: 14.12754027632583;
+					setHeight: 14.12754027632583;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_11
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "FirstSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_11
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_11;
+					} addSurfaceInfo: $ORASurfaceInfoObj_11;
+				} restorePrimitive: $CSGLensSurfacePrimitive_4;
+				$CSGLensSurfacePrimitive create -> $CSGLensSurfacePrimitive_5
+				{
+					setPosition:  { 0. 0. 0.839634052405596  } ;
+					setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+					setName: "SecondLensSurfacePrimitive";
+					setElementShape: "Circular";
+					$ConicCurvatureSurfaceShape create -> $ConicCurvatureSurfaceShape_5
+					{
+						setCurvature: 0.006789143517499;
+						setConcave: 0;
+					} setSurfaceShape: $ConicCurvatureSurfaceShape_5;
+					setWidth: 14.12754027632583;
+					setHeight: 14.12754027632583;
+					setXDecenter: 0.;
+					setYDecenter: 0.;
+					setRotationAngle: 0.;
+					setUseSurfaceBoundary: "No";
+					setCreateFlatSurface: "No";
+					setRadiusToFlat: 0.;
+					$ORASurfaceInfoObj create -> $ORASurfaceInfoObj_12
+					{
+						setSurfaceNumber: 0;
+						setSurfaceName: "SecondSurface";
+						setMaxHits: 1000;
+						setHighestZoneId: 0;
+						$ORAPropertyZoneObj create -> $ORAPropertyZoneObj_12
+						{
+							setName: "BareSurface";
+							setPropertiesName: "Transmitting";
+						} setBareSurfaceProperties: $ORAPropertyZoneObj_12;
+					} addSurfaceInfo: $ORASurfaceInfoObj_12;
+				} restorePrimitive: $CSGLensSurfacePrimitive_5;
+				setUseFirstSurfaceBoundaryAsAperture: "No";
+				setApertureType: "Primitive";
+				setElementShape: "Circular";
+				setWidth: 14.12754027632583;
+				setHeight: 14.12754027632583;
+				restoreTrimOverlappingSurfaces: "No";
+			} restoreRootNode: $CSGLensElementPrimitive_2;
+		} restoreObject: $SurfacePairLens_2;
+		$PointEntity create -> $PointEntity_4;
+		initObject: $PointEntity_4;
+		$PointEntity_4
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontFocalPoint_1";
+			setPosition:  { 0. 18.93710892279072 25.32805295039061  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_4;
+		$PointEntity create -> $PointEntity_5;
+		initObject: $PointEntity_5;
+		$PointEntity_5
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackFocalPoint_1";
+			setPosition:  { 0. 18.93710892279072 -21.58046905730228  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_5;
+		$PointEntity create -> $PointEntity_6;
+		initObject: $PointEntity_6;
+		$PointEntity_6
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "FrontPrincipalPoint_1";
+			setPosition:  { 0. 18.93710892279072 1.729944845496667  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_6;
+		$PointEntity create -> $PointEntity_7;
+		initObject: $PointEntity_7;
+		$PointEntity_7
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "BackPrincipalPoint_1";
+			setPosition:  { 0. 18.93710892279072 2.017636239845693  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+		} restoreObject: $PointEntity_7;
+	} ;
+	getSpectralRegionManager -> $ORASpectralRegionManagerObj_0
+	{
+		$ORASpectralRegionEntityObj create -> $ORASpectralRegionEntityObj_0;
+		initObject: $ORASpectralRegionEntityObj_0;
+		$ORASpectralRegionEntityObj_0
+		{
+			setColor: "FOREGROUND";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "spectralRegion_1";
+			setOriginObj:  { 0. 0.  } ;
+			setTheta: 0.;
+			$ORAWavelengthObj create -> $ORAWavelengthObj_0
+			{
+				setWavelength: 620.;
+				setData: 1.;
+				setColor: "FOREGROUND";
+			} restoreWavln: $ORAWavelengthObj_0;
+			$ORAWavelengthObj create -> $ORAWavelengthObj_1
+			{
+				setWavelength: 550.;
+				setData: 1.;
+				setColor: "FOREGROUND";
+			} restoreWavln: $ORAWavelengthObj_1;
+			$ORAWavelengthObj create -> $ORAWavelengthObj_2
+			{
+				setWavelength: 450.;
+				setData: 1.;
+				setColor: "FOREGROUND";
+			} restoreWavln: $ORAWavelengthObj_2;
+			setRefWavlen: 1;
+			setDiscreteSpectrum: "Yes";
+			setWeightNormalization: "Radiometric";
+			setDefault: 1;
+		} restoreObject: $ORASpectralRegionEntityObj_0;
+	} ;
+	getNSRayManager -> $ORANSRayManagerObj_0
+	{
+		$ORANSRayFanObj create -> $ORANSRayFanObj_0;
+		initObject: $ORANSRayFanObj_0;
+		$ORANSRayFanObj_0
+		{
+			setColor: "GREEN";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "nsRayFan_3";
+			setPosition:  { 0. 0.438529809047676 -2.065334732318874  } ;
+			setOrientation: [3,3] { -1. 0. 0. 0. -1. -1.480297366166875e-17 0. -1.480297366166875e-17 1.  } ;
+			setWavelength: 1;
+			setSpectralRgn: $ORASpectralRegionEntityObj_0;
+			setThreshold: 0.001;
+			setStartingPointClassification: "Automatic";
+			setTraceSequences: "No";
+			setEndPt1Obj:  { 0. 4.539323611355737 30.24442510861615  } ;
+			setEndPt2Obj:  { 0. -4.539323611355737 29.75557489138385  } ;
+			changeNumberOfRays: 11;
+			changeFanSpacingType: "Equiangle";
+			changeFanVergenceType: "Parallel";
+		} restoreObject: $ORANSRayFanObj_0;
+		$ORANSRayFanObj create -> $ORANSRayFanObj_1;
+		initObject: $ORANSRayFanObj_1;
+		$ORANSRayFanObj_1
+		{
+			setColor: "RED";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "nsRayFan_4";
+			setPosition:  { 0. 0.194104691513138 20.91062547759896  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. -1. 1.036208156316813e-16 0. -1.036208156316813e-16 -1.  } ;
+			setWavelength: 1;
+			setSpectralRgn: $ORASpectralRegionEntityObj_0;
+			setThreshold: 0.001;
+			setStartingPointClassification: "Automatic";
+			setTraceSequences: "No";
+			setEndPt1Obj:  { 0. 4.085391250220168 29.96508212734055  } ;
+			setEndPt2Obj:  { 0. -4.085391250220168 30.03491787265945  } ;
+			changeNumberOfRays: 11;
+			changeFanSpacingType: "Equiangle";
+			changeFanVergenceType: "Parallel";
+		} restoreObject: $ORANSRayFanObj_1;
+		$ORANSRayFanObj create -> $ORANSRayFanObj_2;
+		initObject: $ORANSRayFanObj_2;
+		$ORANSRayFanObj_2
+		{
+			setColor: "GREEN";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "nsRayFan_34";
+			setPosition:  { 0. 19.27180745190663 -9.156066718314692  } ;
+			setOrientation: [3,3] { -1. 0. 0. 0. -1. -1.480297366166875e-17 0. -1.480297366166875e-17 1.  } ;
+			setWavelength: 1;
+			setSpectralRgn: $ORASpectralRegionEntityObj_0;
+			setThreshold: 0.001;
+			setStartingPointClassification: "Automatic";
+			setTraceSequences: "No";
+			setEndPt1Obj:  { 0. 4.539323611355737 30.24442510861615  } ;
+			setEndPt2Obj:  { 0. -4.539323611355737 29.75557489138385  } ;
+			changeNumberOfRays: 11;
+			changeFanSpacingType: "Equiangle";
+			changeFanVergenceType: "Parallel";
+		} restoreObject: $ORANSRayFanObj_2;
+		$ORANSRayFanObj create -> $ORANSRayFanObj_3;
+		initObject: $ORANSRayFanObj_3;
+		$ORANSRayFanObj_3
+		{
+			setColor: "RED";
+			setWidth: "1";
+			setLayerNumber: "1";
+			setName: "nsRayFan_35";
+			setPosition:  { 0. 19.02738233437209 13.81989349160314  } ;
+			setOrientation: [3,3] { 1. 0. 0. 0. -1. 1.036208156316813e-16 0. -1.036208156316813e-16 -1.  } ;
+			setWavelength: 1;
+			setSpectralRgn: $ORASpectralRegionEntityObj_0;
+			setThreshold: 0.001;
+			setStartingPointClassification: "Automatic";
+			setTraceSequences: "No";
+			setEndPt1Obj:  { 0. 4.085391250220168 29.96508212734055  } ;
+			setEndPt2Obj:  { 0. -4.085391250220168 30.03491787265945  } ;
+			changeNumberOfRays: 11;
+			changeFanSpacingType: "Equiangle";
+			changeFanVergenceType: "Parallel";
+		} restoreObject: $ORANSRayFanObj_3;
+		changeCurrentThreshold: 0.001;
+		getRegionManager -> $ORARegionDBObj_0
+		{
+			$ORAUnboundedRegionObj create -> $ORAUnboundedRegionObj_0;
+			initObject: $ORAUnboundedRegionObj_0;
+			$ORAUnboundedRegionObj_0
+			{
+				setIsRayTraceable: "Yes";
+				setMaterialName: "air_USER";
+				restoreRegion: currentObj;
+				setRayTraceType: "Solid Trace";
+				setOverridesSystemEnvironment: "No";
+				setSpecifiedTemperature: 22.;
+				setSpecifiedPressure: 760.;
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "AmbientMaterial";
+				setRegionOwner: currentObj;
+				setRootOpenRegion: currentObj;
+				addImmersedElement: $SurfacePairLens_0;
+				addImmersedElement: $SurfacePairLens_1;
+				addImmersedElement: $ORAPlaneInterfaceObj_0;
+				addImmersedElement: $ORAPlaneInterfaceObj_1;
+				addImmersedElement: $ORAPlaneInterfaceObj_2;
+				addImmersedElement: $ORAPlaneInterfaceObj_3;
+				addImmersedElement: $SurfacePairLens_2;
+			} restoreObject: $ORAUnboundedRegionObj_0;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_0;
+			$SurfacePairLens_0  restoreRegion: $ORAOpenRegionObj_0 ;
+			initObject: $ORAOpenRegionObj_0;
+			$ORAOpenRegionObj_0
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_1";
+				setRegionOwner: $SurfacePairLens_0;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_0;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_1;
+			$SurfacePairLens_1  restoreRegion: $ORAOpenRegionObj_1 ;
+			initObject: $ORAOpenRegionObj_1;
+			$ORAOpenRegionObj_1
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_2";
+				setRegionOwner: $SurfacePairLens_1;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_1;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_2;
+			$ORAPlaneInterfaceObj_0  restoreRegion: $ORAOpenRegionObj_2 ;
+			initObject: $ORAOpenRegionObj_2;
+			$ORAOpenRegionObj_2
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_11";
+				setRegionOwner: $ORAPlaneInterfaceObj_0;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_2;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_3;
+			$ORAPlaneInterfaceObj_1  restoreRegion: $ORAOpenRegionObj_3 ;
+			initObject: $ORAOpenRegionObj_3;
+			$ORAOpenRegionObj_3
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_12";
+				setRegionOwner: $ORAPlaneInterfaceObj_1;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_3;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_4;
+			$ORAPlaneInterfaceObj_2  restoreRegion: $ORAOpenRegionObj_4 ;
+			initObject: $ORAOpenRegionObj_4;
+			$ORAOpenRegionObj_4
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_13";
+				setRegionOwner: $ORAPlaneInterfaceObj_2;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_4;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_5;
+			$ORAPlaneInterfaceObj_3  restoreRegion: $ORAOpenRegionObj_5 ;
+			initObject: $ORAOpenRegionObj_5;
+			$ORAOpenRegionObj_5
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_14";
+				setRegionOwner: $ORAPlaneInterfaceObj_3;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_5;
+			$ORAOpenRegionObj create -> $ORAOpenRegionObj_6;
+			$SurfacePairLens_2  restoreRegion: $ORAOpenRegionObj_6 ;
+			initObject: $ORAOpenRegionObj_6;
+			$ORAOpenRegionObj_6
+			{
+				setColor: "FOREGROUND";
+				setWidth: "1";
+				setLayerNumber: "1";
+				setName: "Region_15";
+				setRegionOwner: $SurfacePairLens_2;
+				setRootOpenRegion: $ORAUnboundedRegionObj_0;
+			} restoreObject: $ORAOpenRegionObj_6;
+			restoreObjectCounter: 16;
+			setRootRegion: $ORAUnboundedRegionObj_0;
+		} ;
+		setRootRegion: $ORAUnboundedRegionObj_0;
+		setLimitMaxSegments: "No";
+		setMaxSegments: 100000;
+	} ;
+	getIllumManager -> $ORAIllumManagerObj_0
+	{
+		changeCurrentThreshold: 0.001;
+		setIntensityChartsPolar: "Yes";
+		restoreDefaultMaxSamples: 500000;
+		setDefaultShowRayPreview: "No";
+		setDefaultRayPreviewMax: 1000;
+		setDefaultGenRayPath: "No";
+		setDefaultGenRayReport: "No";
+		setDefaultPerPathRayLimit: 20;
+		setDefaultUpdateOption: "Max Number";
+		setDefaultInterruptInterval: 500000;
+		setDefaultSourcePowerTyp: "Photometric";
+		setDefaultSourceFluxUnits: "Lumen";
+		setDefaultResetRandomSeeds: "Yes";
+		setAnalysisResultsVisualizationType: "False_Color_Forward_Illuminance";
+		setSavedRayDataMemoryAsInt: 4;
+		setNeedsResetRandomSeeds: "Yes";
+		$ReceiverDefaults create -> $ReceiverDefaults_0
+		{
+			setResponsivity: "Photometric";
+			setIlluminanceUnits: "Lux";
+			setLuminanceUnits: "Nit";
+			setCIEUnits: "x,y";
+			setWhitePointInputType: "CIE";
+			setWhitePointX: 0.3127;
+			setWhitePointY: 0.329;
+			setDefaultPhotometryType: "Photometry Type C";
+			setIntensityMeshDefaultMinLongitude: 0.;
+			setIntensityMeshDefaultMaxLongitude: 360.;
+			setIntensityMeshDefaultMinLatitude: 0.;
+			setIntensityMeshDefaultMaxLatitude: 180.;
+			setIntensityMeshDefaultSymmetry: "No Symmetry";
+			setIntensityMeshDefaultShowGraphic: "Yes";
+			setDefaultIntensityRotationType: "Data Vectors";
+			setDefaultCenterDirectionType: "+Z";
+			setDefaultDataUpType: "+Y";
+			setDefaultIntensityRotationAlpha: 0.;
+			setDefaultIntensityRotationBeta: 0.;
+			setDefaultIntensityRotationGamma: 0.;
+			setDefaultSymmetry: "No Symmetry";
+			setDefaultMaxLatitude: 90.;
+			setDefaultFullSlices: "Yes";
+			setDefaultNumberSlices: 90;
+			setDefaultShowSliceGraphic: "Yes";
+			setAddIntensitySlices: "Yes";
+			setDefaultBinAngularResolution: 2.;
+		} restoreFFRReceiverDefaults: $ReceiverDefaults_0;
+		$ReceiverDefaults create -> $ReceiverDefaults_1
+		{
+			setResponsivity: "Photometric";
+			setIlluminanceUnits: "Lux";
+			setLuminanceUnits: "Nit";
+			setCIEUnits: "x,y";
+			setWhitePointInputType: "CIE";
+			setWhitePointX: 0.3127;
+			setWhitePointY: 0.329;
+			setDefaultPhotometryType: "Photometry Type B";
+			setIntensityMeshDefaultMinLongitude: -90.;
+			setIntensityMeshDefaultMaxLongitude: 90.;
+			setIntensityMeshDefaultMinLatitude: -180.;
+			setIntensityMeshDefaultMaxLatitude: 180.;
+			setIntensityMeshDefaultSymmetry: "No Symmetry";
+			setIntensityMeshDefaultShowGraphic: "No";
+			setDefaultIntensityRotationType: "Data Vectors";
+			setDefaultCenterDirectionType: "+Z";
+			setDefaultDataUpType: "+Y";
+			setDefaultIntensityRotationAlpha: 0.;
+			setDefaultIntensityRotationBeta: 0.;
+			setDefaultIntensityRotationGamma: 0.;
+			setDefaultSymmetry: "No Symmetry";
+			setDefaultMaxLatitude: 90.;
+			setDefaultFullSlices: "No";
+			setDefaultNumberSlices: 2;
+			setDefaultShowSliceGraphic: "No";
+			setAddIntensitySlices: "Yes";
+			setDefaultBinAngularResolution: 2.;
+		} restoreSurfaceReceiverDefaults: $ReceiverDefaults_1;
+		$ReceiverDefaults create -> $ReceiverDefaults_2
+		{
+			setResponsivity: "Photometric";
+			setIlluminanceUnits: "Lux";
+			setLuminanceUnits: "Nit";
+			setCIEUnits: "x,y";
+			setWhitePointInputType: "CIE";
+			setWhitePointX: 0.3127;
+			setWhitePointY: 0.329;
+			setDefaultPhotometryType: "Photometry Type C";
+			setIntensityMeshDefaultMinLongitude: 0.;
+			setIntensityMeshDefaultMaxLongitude: 360.;
+			setIntensityMeshDefaultMinLatitude: 0.;
+			setIntensityMeshDefaultMaxLatitude: 180.;
+			setIntensityMeshDefaultSymmetry: "No Symmetry";
+			setIntensityMeshDefaultShowGraphic: "Yes";
+			setDefaultIntensityRotationType: "Data Vectors";
+			setDefaultCenterDirectionType: "+Z";
+			setDefaultDataUpType: "+Y";
+			setDefaultIntensityRotationAlpha: 0.;
+			setDefaultIntensityRotationBeta: 0.;
+			setDefaultIntensityRotationGamma: 0.;
+			setDefaultSymmetry: "No Symmetry";
+			setDefaultMaxLatitude: 180.;
+			setDefaultFullSlices: "Yes";
+			setDefaultNumberSlices: 36;
+			setDefaultShowSliceGraphic: "No";
+			setDefaultBinAngularResolution: 5.;
+		} restoreObjectReceiverDefaults: $ReceiverDefaults_2;
+	} ;
+	getOptimizationManager -> $OptimizationManager_0
+	{
+		restoreOptEngine: "Local Descent";
+		setNoiseFloorIntervals: 4;
+		setTargetLimitValue: 1.0e-10;
+		setDampingFactorOption: "Scaled Damping";
+		setScaleVarIncs: "Yes";
+		restoreMinIterations: 2;
+		restoreMaxIterations: 5;
+		restoreDLSImprovementFactor: 0.05;
+		restoreNTOImprovementFactor: 0.001;
+		restoreNumberOfParticles: 10;
+		restoreBoundsPercentage: 200.;
+		restoreIncrementScaleFactor: 6.;
+		setUseVariableValuesAsICsForGlobal: "Yes";
+		restoreUseIncrementsAsBoundingBoxForGlobal: "Yes";
+		restoreMinInertiaWeight: 0.1;
+		restoreMaxInertiaWeight: 1.1;
+		restoreSelfAdjustmentWeight: 1.49;
+		restoreSocialAdjustmentWeight: 1.49;
+		setResultsValid: "No";
+		setShowMinorCycleUpdates: "No";
+		setWarnUserAboutRandomSeedControl: "Yes";
+		setUseNoiseFloorForTermination: "Yes";
+		setEvalNoiseFloorWhenStartingOpt: "Yes";
+		setNoiseFloorMultiplier: 1.2;
+		restoreUseSequenceSimulation: "No";
+		setBackOutVariableChangesWithUndo: "Yes";
+		setRequireRayOnReceiver: "Yes";
+		setPlotMeritFunctionLogScale: "No";
+		setCurrentInitialStateIteration: 0;
+		setBoundedVariableHandler: "Treat As Constraint";
+		restoreIncrementConversionFactorDLSToNTO: 3.;
+		restoreConvertIncrementsWhenChangingEngine: "Yes";
+	} ;
+	getToleranceManager -> $ToleranceManager_0
+	{
+		restoreDefaultNumQFitTrials: 100;
+		restoreDefaultPosTolXYPairing: "Yes";
+		restoreDefaultISSStepCount: 5;
+		restoreDefaultLinearToleranceValue: 0.01;
+		restoreDefaultAngularToleranceValue: 0.01;
+		restoreShowMinorCycleUpdates: "No";
+		restoreShowToleranceBoundsWarning: "Yes";
+		restoreResetPerturbationWhenDBItemChanges: "Yes";
+		getSensitivityManager -> $SensitivityManager_0
+		{
+			getIndividualSensitivity -> $IndividualSensitivity_0
+			{
+				setPerformanceIndex: 0;
+				setResultsValid: "No";
+				setNumberOfSamples: 5;
+				setFittingDegrees: "2";
+				setEstimatedUnitTime: 0.;
+			} ;
+			getQFitSensitivity -> $QFitSensitivity_0
+			{
+				setPerformanceIndex: 0;
+				setResultsValid: "Yes";
+				setNumberOfSamples: 12;
+				setUniformSamples: 3;
+				setUniformSampling: "No";
+				setEstimatedUnitTime: 0.;
+			} ;
+		} ;
+		getTolSimulationManager -> $ToleranceSimulationManager_0
+		{
+			getDirectMonteCarloSim -> $ToleranceSimulation_0
+			{
+				restoreMonteCarloTrialCount2: 100;
+			} ;
+			getQuadraticFitMonteCarloSim -> $ToleranceSimulation_1
+			{
+				restoreMonteCarloTrialCount2: 100;
+			} ;
+		} ;
+	} ;
+	getPickupManager -> $PickupManager_0
+	{
+		$ParametricControlsGroup create -> $ParametricControlsGroup_0;
+		initRestoreParametricControlsGroup: $ParametricControlsGroup_0;
+		$ParametricControlsGroup_0
+		{
+			setName: "root";
+			$AliasGroup create -> $AliasGroup_0;
+			initRestoreAliasGroup: $AliasGroup_0;
+			$AliasGroup_0
+			{
+				setName: "Aliases";
+			} restoreAliasGroup: $AliasGroup_0;
+			$ExpressionGroup create -> $ExpressionGroup_0;
+			initRestoreExpressionGroup: $ExpressionGroup_0;
+			$ExpressionGroup_0
+			{
+				setName: "Parametric Expressions";
+			} restoreExpressionGroup: $ExpressionGroup_0;
+			$PickupGroup create -> $PickupGroup_0;
+			initRestorePickupGroup: $PickupGroup_0;
+			$PickupGroup_0
+			{
+				setName: "Pickups";
+			} restorePickupGroup: $PickupGroup_0;
+			$UserDataGroup create -> $UserDataGroup_0;
+			initRestoreUserDataGroup: $UserDataGroup_0;
+			$UserDataGroup_0
+			{
+				setName: "User Data";
+			} restoreUserDataGroup: $UserDataGroup_0;
+		} restoreParametricControlsGroup: $ParametricControlsGroup_0;
+	} ;
+	$ORA3DCADModelObj create -> $ORA3DCADModelObj_0
+	{
+		setElementDisplayQuality: "Medium";
+		$ORA3DCADViewObj create -> $ORA3DCADViewObj_0
+		{
+			setParentWidget: null;
+			setViewPositionAndSize:  { 2 30 1653 991  } ;
+			restoreDisplayMask: "11111111111111111111111111111111";
+			setSelectMask: "11111111111111111111111111111111";
+			setBackgroundRed: 40;
+			setBackgroundGreen: 40;
+			setBackgroundBlue: 40;
+			setForegroundRed: 255;
+			setForegroundGreen: 255;
+			setForegroundBlue: 255;
+			setRubberbandRed: 255;
+			setRubberbandGreen: 128;
+			setRubberbandBlue: 0;
+			setSelectRed: 255;
+			setSelectGreen: 128;
+			setSelectBlue: 0;
+			setCommitColors: 1;
+			setGradientBackground: 0;
+			setLineAntiAliasing: 0;
+			setDrawAnnotation: 1;
+			getPaneAt: 0 -> $ORANew3DGraphicsPaneObj_0
+			{
+				setId: 0;
+				setIsCurrent: 0;
+				setActive: 1;
+				setPaneName: "Top View";
+				setWindow:  { -4.739576131287249 6.029827421708038 4.739576131287249 0.770173578291961  } ;
+				setWindowPos:  { 0 0 966 536  } ;
+				setModelViewMatrix:  { -1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 1.  } ;
+				setLightVector:  { 0. 1. 0.  } ;
+				setViewDepth: 0.;
+				restoreUserDefinedViewMatrix:  { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				restoreUserDefinedViewVolume:  { 0. -10. 10. 10. -10. -10000. 10000.  } ;
+			} ;
+			getPaneAt: 1 -> $ORANew3DGraphicsPaneObj_1
+			{
+				setId: 1;
+				setIsCurrent: 0;
+				setActive: 1;
+				setPaneName: "Isometric View";
+				setWindow:  { -41.06147564389749 25.4806840325162 45.86980246307278 -22.70459524911364  } ;
+				setWindowPos:  { 966 0 1933 536  } ;
+				setModelViewMatrix:  { -0.707106781186548 0.408248290463863 -0.577350269189626 0. 0. 0.816496580927726 0.577350269189626 0. 0.707106781186548 0.408248290463863 -0.577350269189626 0. 0. 0. 0. 1.  } ;
+				setLightVector:  { -0.452215631646135 0.768766573798429 -0.452215631646135  } ;
+				setViewDepth: 0.;
+				restoreUserDefinedViewMatrix:  { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				restoreUserDefinedViewVolume:  { 0. -10. 10. 10. -10. -10000. 10000.  } ;
+			} ;
+			getPaneAt: 2 -> $ORANew3DGraphicsPaneObj_2
+			{
+				setId: 2;
+				setIsCurrent: 0;
+				setActive: 1;
+				setPaneName: "Front View";
+				setWindow:  { -33.07032101606625 18.34957770663717 33.07032101606625 -18.34957770663717  } ;
+				setWindowPos:  { 0 536 966 1072  } ;
+				setModelViewMatrix:  { -1. 0. 0. 0. 0. 1. 0. 0. 0. 0. -1. 0. 0. 0. 0. 1.  } ;
+				setLightVector:  { 0. 0.573462344363328 -0.819231920519041  } ;
+				setViewDepth: 0.;
+				restoreUserDefinedViewMatrix:  { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				restoreUserDefinedViewVolume:  { 0. -10. 10. 10. -10. -10000. 10000.  } ;
+			} ;
+			getPaneAt: 3 -> $ORANew3DGraphicsPaneObj_3
+			{
+				setId: 3;
+				setIsCurrent: 1;
+				setActive: 1;
+				setPaneName: "Right Side View";
+				setWindow:  { -30.94387663325902 32.67221686909234 51.41071119629059 -15.03626117239621  } ;
+				setWindowPos:  { 0 0 1469 851  } ;
+				setModelViewMatrix:  { 0. 0. -1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 1.  } ;
+				setLightVector:  { -0.819231920519041 0.573462344363328 0.  } ;
+				setViewDepth: 0.;
+				restoreUserDefinedViewMatrix:  { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+				restoreUserDefinedViewVolume:  { 0. -10. 10. 10. -10. -10000. 10000.  } ;
+			} ;
+			getUCS -> $ORA3DUserCoordinateSystemObj_0
+			{
+				setOrigin:  { 0. 0. 0.  } ;
+				setOrientation: [3,3] { 1. 0. 0. 0. 1. 0. 0. 0. 1.  } ;
+			} ;
+			setFirstPane: 3;
+			setLastPane: 4;
+			setCurrentPane: 3;
+			clickToSwitchPanes: 1;
+			setDisplayGridType: "DOT";
+			setGridDisplayed: 0;
+			setDisplayGrid:  { 1. 1. 0. 0.  } ;
+			setGridLabelsDisplayed: 0;
+			setHiliteInterval:  { 5 5  } ;
+			setGridSnap: 0;
+			setSnapGrid:  { 0.1 0.1 0. 0.  } ;
+			setUCSDisplayStyle: "OpenArrowHead";
+			restoreShowRARRays: 1;
+			getColorComponent: 1 -> $ORAColorComponentObj_12
+			{
+				setRed: 128;
+				setGreen: 128;
+				setBlue: 255;
+				setAlpha: 0.600000023841858;
+				setShininess: 38.40000152587891;
+			} ;
+			getColorComponent: 2 -> $ORAColorComponentObj_13
+			{
+				setRed: 192;
+				setGreen: 192;
+				setBlue: 192;
+				setAlpha: 0.850000023841858;
+				setShininess: 89.59999847412109;
+			} ;
+			getColorComponent: 3 -> $ORAColorComponentObj_14
+			{
+				setRed: 128;
+				setGreen: 128;
+				setBlue: 255;
+				setAlpha: 0.379999995231628;
+				setShininess: 39.;
+			} ;
+			getColorComponent: 4 -> $ORAColorComponentObj_15
+			{
+				setRed: 140;
+				setGreen: 255;
+				setBlue: 255;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} ;
+			getColorComponent: 5 -> $ORAColorComponentObj_16
+			{
+				setRed: 255;
+				setGreen: 0;
+				setBlue: 128;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} ;
+			getColorComponent: 6 -> $ORAColorComponentObj_17
+			{
+				setRed: 187;
+				setGreen: 166;
+				setBlue: 13;
+				setAlpha: 0.870000004768372;
+				setShininess: 38.40000152587891;
+			} ;
+			getColorComponent: 7 -> $ORAColorComponentObj_18
+			{
+				setRed: 128;
+				setGreen: 0;
+				setBlue: 0;
+				setAlpha: 0.870000004768372;
+				setShininess: 89.59999847412109;
+			} ;
+			getColorComponent: 8 -> $ORAColorComponentObj_19
+			{
+				setRed: 255;
+				setGreen: 155;
+				setBlue: 64;
+				setAlpha: 0.600000023841858;
+				setShininess: 85.33376312255859;
+			} ;
+			setRenderMode: "WIREFRAME";
+			setDrawMode: "By Refract Mode";
+			setXViewAngle: 15.;
+			setYViewAngle: 15.;
+			setZViewAngle: 15.;
+			$SectionPlanes create -> $SectionPlanes_0
+			{
+				$SectionPlane create -> $SectionPlane_0
+				{
+					setColor: "FOREGROUND";
+					setWidth: "1";
+					setLayerNumber: "1";
+					setName: "Section Plane 1";
+					setSectionPlaneType: "YZ";
+					setSectionPlaneEnabled: "Yes";
+					setSectionPlaneVisible: "Yes";
+					setSectionPlaneOffset: 0.;
+					setSectionPlaneReversed: "No";
+					setSectionCoordinateSystemType: "Global Coordinate System";
+					setReferenceCoordinateSystem: "";
+					setSectionColor: 255;
+				} restoreSectionPlane1: $SectionPlane_0;
+				$SectionPlane create -> $SectionPlane_1
+				{
+					setColor: "FOREGROUND";
+					setWidth: "1";
+					setLayerNumber: "1";
+					setName: "Section Plane 2";
+					setSectionPlaneType: "XZ";
+					setSectionPlaneEnabled: "No";
+					setSectionPlaneVisible: "No";
+					setSectionPlaneOffset: 0.;
+					setSectionPlaneReversed: "No";
+					setSectionCoordinateSystemType: "Global Coordinate System";
+					setReferenceCoordinateSystem: "";
+					setSectionColor: 65280;
+				} restoreSectionPlane2: $SectionPlane_1;
+				$SectionPlane create -> $SectionPlane_2
+				{
+					setColor: "FOREGROUND";
+					setWidth: "1";
+					setLayerNumber: "1";
+					setName: "Section Plane 3";
+					setSectionPlaneType: "XY";
+					setSectionPlaneEnabled: "No";
+					setSectionPlaneVisible: "No";
+					setSectionPlaneOffset: 0.;
+					setSectionPlaneReversed: "No";
+					setSectionCoordinateSystemType: "Global Coordinate System";
+					setReferenceCoordinateSystem: "";
+					setSectionColor: 16711680;
+				} restoreSectionPlane3: $SectionPlane_2;
+				setName: "Section Planes";
+				setShowSections: "No";
+				setSectionSurfaceOption: "Show Solid Surface";
+				setInteriorFacesColor: 15615;
+				setSectionSurfaceOpacity: 48;
+				setSectionSurfaceColorOption: "Section Plane Color";
+				setInteriorColorOption: "Surface Color";
+				setIncludeSimulationRays: "Yes";
+			} restoreSectionPlanes: $SectionPlanes_0;
+		} restoreView: $ORA3DCADViewObj_0;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_0
+		{
+			setDatabaseEntity: $PRRAmbientLight_0;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_0;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_1
+		{
+			setDatabaseEntity: $SurfacePairLens_0;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_1;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_2
+		{
+			setDatabaseEntity: $SurfacePairLens_1;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_2;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_3
+		{
+			setDatabaseEntity: $ORANSRayFanObj_0;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_3;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_4
+		{
+			setDatabaseEntity: $ORANSRayFanObj_1;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_4;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_5
+		{
+			setDatabaseEntity: $PointEntity_0;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_5;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_6
+		{
+			setDatabaseEntity: $PointEntity_1;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_6;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_7
+		{
+			setDatabaseEntity: $PointEntity_2;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_7;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_8
+		{
+			setDatabaseEntity: $PointEntity_3;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_8;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_9
+		{
+			setDatabaseEntity: $ORAPlaneInterfaceObj_0;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_9;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_10
+		{
+			setDatabaseEntity: $ORAPlaneInterfaceObj_1;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_10;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_11
+		{
+			setDatabaseEntity: $ORAPlaneInterfaceObj_2;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_11;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_12
+		{
+			setDatabaseEntity: $ORAPlaneInterfaceObj_3;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_12;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_13
+		{
+			setDatabaseEntity: $SurfacePairLens_2;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_13;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_14
+		{
+			setDatabaseEntity: $PointEntity_4;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_14;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_15
+		{
+			setDatabaseEntity: $PointEntity_5;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_15;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_16
+		{
+			setDatabaseEntity: $PointEntity_6;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_16;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_17
+		{
+			setDatabaseEntity: $PointEntity_7;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_17;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_18
+		{
+			setDatabaseEntity: $ORANSRayFanObj_2;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_18;
+		$ORA3DCADEntityObj create -> $ORA3DCADEntityObj_19
+		{
+			setDatabaseEntity: $ORANSRayFanObj_3;
+			setBlanked: 0;
+		} restoreModelEntity: $ORA3DCADEntityObj_19;
+	} restoreModel: $ORA3DCADModelObj_0;
+	restoreShowRayPreviewAsPoints: "No";
+	restoreShowRARRaysAsPoints: "No";
+	setUseSystemEnvironmentForRayTrace: "No";
+	setSystemTemperature: 22.;
+	setSystemPressure: 760.;
+	setIgnoreEntityEnvironmentSettings: "No";
+	restoreViewLayout: "MDITabbedGroups,1
+Console,2,30,1653,991
+3DDesignView,2,30,1653,991
+";
+} ;

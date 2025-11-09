@@ -76,7 +76,7 @@ Partial Class Form1
         ' 
         CheckBoxDrawPrincipalPoints.AutoSize = True
         CheckBoxDrawPrincipalPoints.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawPrincipalPoints.Location = New Point(7, 61)
+        CheckBoxDrawPrincipalPoints.Location = New Point(7, 63)
         CheckBoxDrawPrincipalPoints.Name = "CheckBoxDrawPrincipalPoints"
         CheckBoxDrawPrincipalPoints.Size = New Size(167, 22)
         CheckBoxDrawPrincipalPoints.TabIndex = 4
@@ -87,7 +87,7 @@ Partial Class Form1
         ' 
         CheckBoxDrawFocalPlanes.AutoSize = True
         CheckBoxDrawFocalPlanes.Font = New Font("Microsoft Sans Serif", 9F)
-        CheckBoxDrawFocalPlanes.Location = New Point(7, 95)
+        CheckBoxDrawFocalPlanes.Location = New Point(7, 98)
         CheckBoxDrawFocalPlanes.Name = "CheckBoxDrawFocalPlanes"
         CheckBoxDrawFocalPlanes.Size = New Size(241, 22)
         CheckBoxDrawFocalPlanes.TabIndex = 5
@@ -210,12 +210,13 @@ Partial Class Form1
         ' txtLog
         ' 
         txtLog.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        txtLog.Font = New Font("Courier New", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtLog.Location = New Point(22, 427)
         txtLog.Margin = New Padding(3, 4, 3, 4)
         txtLog.Multiline = True
         txtLog.Name = "txtLog"
         txtLog.ReadOnly = True
-        txtLog.Size = New Size(607, 137)
+        txtLog.Size = New Size(607, 244)
         txtLog.TabIndex = 15
         ' 
         ' PictureBox1
@@ -268,7 +269,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(643, 581)
+        ClientSize = New Size(643, 688)
         Controls.Add(btnSampleLens)
         Controls.Add(LinkLabel1)
         Controls.Add(chkUseLTSelection)

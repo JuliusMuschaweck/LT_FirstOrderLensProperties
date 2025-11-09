@@ -92,7 +92,7 @@ Module LTConnect
         Dim tagpoints = LensSurfaceTagPoints(surfaceListKey)
         ErrorCheck.Assert(CollinearN3D(tagpoints), "Lens surface tag points are not collinear")
         Dim surfaces = LensSurfaces(surfaceListKey)
-        lt.Message("Found " & surfaces.Length().ToString() & " collinear lens surfaces in selection")
+        'lt.Message("Found " & surfaces.Length().ToString() & " collinear lens surfaces in selection")
         Return surfaces
     End Function
 
@@ -125,14 +125,17 @@ Module LTConnect
     Public Function ComputeFocalLengths(cardinalPoints As CardinalPoints) As (EFL As Double, FFL As Double, BFL As Double)
         Dim efl1 = Norm3D(Subtract3D(cardinalPoints.principal_front_, cardinalPoints.focus_front_))
         Dim efl2 = Norm3D(Subtract3D(cardinalPoints.principal_back_, cardinalPoints.focus_back_))
-        ErrorCheck.Assert(Math.Abs(efl1 - efl2) / (efl1 + efl2) < 0.000001,
+        Dim diff = Math.Abs(efl1 - efl2) / (efl1 + efl2)
+        ' ErrorCheck.AddWarningIfFalse(False, diff.ToString)
+        ErrorCheck.AddWarningIfFalse(diff < 0.000001,
                           "ComputeFocalLengths: front and back EFLs are different, EFL1 = " & efl1.ToString() & ", EFL2 = " & efl2.ToString())
         Dim EFL = (efl1 + efl2) / 2
         Dim FFL = Norm3D(Subtract3D(cardinalPoints.vertex_front_, cardinalPoints.focus_front_))
         Dim BFL = Norm3D(Subtract3D(cardinalPoints.vertex_back_, cardinalPoints.focus_back_))
         Return (EFL, FFL, BFL)
     End Function
-    Public Function TraceParaxialRays() As (parax As ParaxialRaysStartDir, rf1 As QuickRayAimResult, rf2 As QuickRayAimResult, rb1 As QuickRayAimResult, rb2 As QuickRayAimResult)
+    Public Function TraceParaxialRays() As (parax As ParaxialRaysStartDir, rf1 As QuickRayAimResult,
+                        rf2 As QuickRayAimResult, rb1 As QuickRayAimResult, rb2 As QuickRayAimResult, surfaces As LensSurfaceData())
         Dim lt = GetLTAPIServer()
         Dim surfaces = GetSortedLensSurfaces()
         Dim nSurfaces = surfaces.Length()
@@ -155,7 +158,7 @@ Module LTConnect
         ' lt.Message(RayToString("distant forward", ray_forward_2.r_, ray_forward_2.k_))
         ' lt.Message(RayToString("near backward", ray_backward_1.r_, ray_backward_1.k_))
         ' lt.Message(RayToString("distant backward", ray_backward_2.r_, ray_backward_2.k_))
-        Return (Parax, ray_forward_1, ray_forward_2, ray_backward_1, ray_backward_2)
+        Return (Parax, ray_forward_1, ray_forward_2, ray_backward_1, ray_backward_2, surfaces)
     End Function
 
     Public Function LensSurfaceTagPoints(surfaceListKey As String) As Double(,)
